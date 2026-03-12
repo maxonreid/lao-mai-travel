@@ -1,0 +1,156 @@
+.section {
+  padding: 6rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgLandscape {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(10,15,46,0.97) 40%, rgba(10,15,46,0.7) 100%),
+    url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1800&q=80') right center / cover no-repeat;
+  z-index: 0;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Images ── */
+.imgWrap {
+  position: relative;
+}
+
+.imgMain {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+.imgAccent {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  width: 55%;
+  aspect-ratio: 1;
+  border: 4px solid var(--navy);
+  box-shadow: 0 0 0 1px rgba(201,168,76,0.3);
+}
+
+.img {
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 2rem; left: -2rem;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--navy);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+.badgeNum {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  display: block;
+}
+
+.badgeLabel {
+  font-family: 'Cinzel', serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* ── Text ── */
+.eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.body {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  opacity: 0.65;
+  margin-bottom: 1rem;
+}
+
+.features {
+  list-style: none;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.featureIcon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(201,168,76,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.featureTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-pale);
+  margin-bottom: 0.4rem;
+}
+
+.featureDesc {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  opacity: 0.6;
+}

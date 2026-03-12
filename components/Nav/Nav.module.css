@@ -1,0 +1,112 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 4rem;
+  background: linear-gradient(180deg, rgba(10,15,46,0.95) 0%, transparent 100%);
+  backdrop-filter: blur(2px);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  animation: fadeDown 1s ease both;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.logoText {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.logoSub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-pale);
+  opacity: 0.7;
+}
+
+.links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.link {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--cream);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: color 0.3s, opacity 0.3s;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.link:hover { color: var(--gold); opacity: 1; }
+.link:hover::after { width: 100%; }
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.langSwitcher {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.langBtn {
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid rgba(201,168,76,0.2);
+  color: var(--cream);
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0.6;
+}
+
+.langBtnActive,
+.langBtn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  opacity: 1;
+}
+
+.cta {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  padding: 0.65rem 1.6rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.25);
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 30px rgba(201,168,76,0.4);
+}

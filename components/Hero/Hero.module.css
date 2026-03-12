@@ -1,0 +1,159 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(160deg, rgba(10,15,46,0.82) 0%, rgba(10,15,46,0.35) 50%, rgba(10,15,46,0.72) 100%),
+    url('https://images.unsplash.com/photo-1686120552846-7caf1a345876?w=1920&q=85') center / cover no-repeat;
+  transform: scale(1.05);
+  animation: slowZoom 20s ease-out both;
+}
+
+/* fade out into next section */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(180deg, transparent, var(--navy));
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  padding: 0 4rem;
+  max-width: 900px;
+}
+
+.eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  animation: fadeUp 1s 0.4s ease both;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+  animation: fadeUp 1s 0.6s ease both;
+}
+
+.title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream);
+  opacity: 0.75;
+  margin-bottom: 2.5rem;
+  animation: fadeUp 1s 0.8s ease both;
+}
+
+.body {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: var(--cream);
+  opacity: 0.75;
+  max-width: 520px;
+  margin-bottom: 3rem;
+  animation: fadeUp 1s 1s ease both;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  animation: fadeUp 1s 1.2s ease both;
+}
+
+.btnPrimary {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 25px rgba(201,168,76,0.35);
+  display: inline-block;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(201,168,76,0.5);
+}
+
+.btnGhost {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.btnGhost:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.08);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 3rem;
+  right: 4rem;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeUp 1s 1.5s ease both;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(var(--gold), transparent);
+  animation: scrollPulse 2s infinite;
+}
+
+.scrollLabel {
+  font-family: 'Cinzel', serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  writing-mode: vertical-rl;
+}

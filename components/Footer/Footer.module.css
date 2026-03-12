@@ -1,0 +1,126 @@
+.footer {
+  background: #060a1e;
+  border-top: 1px solid rgba(201,168,76,0.15);
+  padding: 4rem 4rem 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.brandName {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.brandSub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--cream);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.desc {
+  font-size: 0.78rem;
+  line-height: 1.85;
+  opacity: 0.55;
+  margin-bottom: 1.5rem;
+}
+
+.socials {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social {
+  width: 34px; height: 34px;
+  border: 1px solid rgba(201,168,76,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.social:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.1);
+}
+
+.colTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.link {
+  font-size: 0.78rem;
+  color: var(--cream);
+  opacity: 0.55;
+  text-decoration: none;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.link:hover {
+  opacity: 1;
+  color: var(--gold);
+}
+
+.contactItem {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+  font-size: 0.78rem;
+  opacity: 0.55;
+  line-height: 1.6;
+}
+
+.bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(201,168,76,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom p {
+  font-size: 0.7rem;
+  opacity: 0.35;
+  letter-spacing: 0.05em;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.bottomLinks a {
+  font-size: 0.7rem;
+  opacity: 0.35;
+  text-decoration: none;
+  color: var(--cream);
+  transition: opacity 0.2s;
+}
+
+.bottomLinks a:hover { opacity: 0.8; }

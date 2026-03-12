@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l /c/Users/USER/Desktop/PROJECTS/LAO-MAI-TRAVEL/lao-mai-travel/components/*/\\\\*.tsx)"
+    ]
+  }
+}
