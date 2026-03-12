@@ -13,6 +13,7 @@ const navLinks = [
 
 export default function Nav() {
   const [locale, setLocale] = useState<'EN' | 'ລາວ'>('EN')
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
     <nav className={styles.nav}>
@@ -21,15 +22,31 @@ export default function Nav() {
         <span className={styles.logoSub}>YOUR TRUSTED LOCAL TRAVEL PARTNER LAOS</span>
       </Link>
 
-      <ul className={styles.links}>
+      <button 
+        className={styles.hamburger}
+        onClick={() => setMobileOpen(!mobileOpen)}
+        aria-label="Toggle menu"
+      >
+        <span className={mobileOpen ? styles.hamburgerOpen : ''}></span>
+        <span className={mobileOpen ? styles.hamburgerOpen : ''}></span>
+        <span className={mobileOpen ? styles.hamburgerOpen : ''}></span>
+      </button>
+
+      <ul className={`${styles.links} ${mobileOpen ? styles.linksOpen : ''}`}>
         {navLinks.map((l) => (
           <li key={l.label}>
-            <a href={l.href} className={styles.link}>{l.label}</a>
+            <a 
+              href={l.href} 
+              className={styles.link}
+              onClick={() => setMobileOpen(false)}
+            >
+              {l.label}
+            </a>
           </li>
         ))}
       </ul>
 
-      <div className={styles.right}>
+      <div className={`${styles.right} ${mobileOpen ? styles.rightOpen : ''}`}>
         <div className={styles.langSwitcher}>
           {(['EN', 'ລາວ'] as const).map((lang) => (
             <button
@@ -41,7 +58,7 @@ export default function Nav() {
             </button>
           ))}
         </div>
-        <a href="#contact" className={styles.cta}>BOOK NOW</a>
+        <a href="#contact" className={styles.cta} onClick={() => setMobileOpen(false)}>BOOK NOW</a>
       </div>
     </nav>
   )

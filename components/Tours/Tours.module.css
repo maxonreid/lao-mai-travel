@@ -1,5 +1,5 @@
 .section {
-  padding: 6rem 4rem;
+  padding: 6rem clamp(1.5rem, 5vw, 4rem);
   background: var(--navy-mid);
 }
 
@@ -108,4 +108,24 @@
   font-size: 0.65rem;
   opacity: 0.6;
   color: var(--cream);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 4rem clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 2rem 1.5rem;
+  }
 }

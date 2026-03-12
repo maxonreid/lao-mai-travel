@@ -1,7 +1,7 @@
 .footer {
   background: #060a1e;
   border-top: 1px solid rgba(201,168,76,0.15);
-  padding: 4rem 4rem 2rem;
+  padding: 4rem clamp(1.5rem, 5vw, 4rem) 2rem;
 }
 
 .grid {
@@ -124,3 +124,38 @@
 }
 
 .bottomLinks a:hover { opacity: 0.8; }
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 3rem clamp(1.5rem, 5vw, 4rem) 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .bottomLinks {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .social {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

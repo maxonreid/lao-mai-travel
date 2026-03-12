@@ -65,3 +65,17 @@
   opacity: 0.6;
   margin-top: 0.5rem;
 }
+
+@media (max-width: 640px) {
+  .wrapper {
+    height: 280px;
+  }
+
+  .eyebrow {
+    font-size: 0.52rem;
+  }
+
+  .dividerLine {
+    width: 35px;
+  }
+}

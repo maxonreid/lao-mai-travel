@@ -1,5 +1,5 @@
 .section {
-  padding: 6rem 4rem;
+  padding: 6rem clamp(1.5rem, 5vw, 4rem);
   position: relative;
   overflow: hidden;
 }
@@ -153,4 +153,60 @@
   font-size: 0.8rem;
   line-height: 1.8;
   opacity: 0.6;
+}
+
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .imgWrap {
+    order: -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 4rem clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .inner {
+    gap: 3rem;
+  }
+
+  .imgAccent {
+    width: 45%;
+    bottom: -1rem;
+    right: -1rem;
+  }
+
+  .badge {
+    left: -1rem;
+    padding: 1rem;
+  }
+
+  .badgeNum {
+    font-size: 2rem;
+  }
+
+  .badgeLabel {
+    font-size: 0.45rem;
+  }
+
+  .features {
+    margin-top: 2rem;
+    gap: 1.2rem;
+  }
+
+  .feature {
+    gap: 1rem;
+  }
+
+  .featureIcon {
+    width: 36px;
+    height: 36px;
+  }
 }

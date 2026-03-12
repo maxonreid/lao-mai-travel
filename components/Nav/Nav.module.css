@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
   background: linear-gradient(180deg, rgba(10,15,46,0.95) 0%, transparent 100%);
   backdrop-filter: blur(2px);
   border-bottom: 1px solid rgba(201,168,76,0.1);
@@ -85,6 +85,11 @@
   cursor: pointer;
   transition: all 0.2s;
   opacity: 0.6;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .langBtnActive,
@@ -104,9 +109,104 @@
   text-decoration: none;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 4px 20px rgba(201,168,76,0.25);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cta:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 30px rgba(201,168,76,0.4);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 101;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: var(--gold);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.hamburger span.hamburgerOpen:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger span.hamburgerOpen:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger span.hamburgerOpen:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(10,15,46,0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 0;
+    padding: 6rem 2rem 2rem;
+    transition: right 0.3s ease;
+    border-left: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .linksOpen {
+    right: 0;
+  }
+
+  .link {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .right {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 280px;
+    background: rgba(10,15,46,0.98);
+    padding: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: top 0.3s ease;
+  }
+
+  .rightOpen {
+    top: calc(100vh - 180px);
+  }
+
+  .langSwitcher {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
 }

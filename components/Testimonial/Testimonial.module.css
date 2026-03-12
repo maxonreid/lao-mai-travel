@@ -1,6 +1,6 @@
 .section {
   text-align: center;
-  padding: 7rem 4rem;
+  padding: 7rem clamp(1.5rem, 5vw, 4rem);
   position: relative;
   overflow: hidden;
 }
@@ -84,4 +84,26 @@
   letter-spacing: 0.3em;
   color: var(--gold);
   margin-bottom: 3rem;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 5rem clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .quoteBg {
+    font-size: 12rem;
+  }
+
+  .divider {
+    margin: 0 auto 2rem;
+  }
+
+  .divider:last-child {
+    margin: 2rem auto 0;
+  }
+
+  .text {
+    margin-bottom: 1.5rem;
+  }
 }
