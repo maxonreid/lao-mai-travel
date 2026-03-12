@@ -11,7 +11,7 @@ const destinations = [
   {
     name: 'Luang Prabang',
     tag: 'UNESCO HERITAGE',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1707817615045-83732dff7d8d?w=600&q=80',
   },
   {
     name: 'Vang Vieng',
