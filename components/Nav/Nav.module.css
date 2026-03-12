@@ -140,7 +140,7 @@
 }
 
 .hamburger span.hamburgerOpen:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
+  transform: translateY(7px) rotate(45deg);
 }
 
 .hamburger span.hamburgerOpen:nth-child(2) {
@@ -148,65 +148,129 @@
 }
 
 .hamburger span.hamburgerOpen:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
+  .nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .logoText {
+    font-size: 0.85rem;
+  }
+
+  .logoSub {
+    font-size: 0.45rem;
+  }
+
   .hamburger {
     display: flex;
   }
 
-  .links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
+  /* Hidden by default on mobile — revealed inside the open drawer */
+  .links,
+  .right {
+    display: none;
+  }
+
+  /* ── Open state: the <nav> itself becomes the slide-in drawer ── */
+  .navOpen {
+    left: auto;
+    width: 75vw;
+    max-width: 320px;
     height: 100vh;
-    background: rgba(10,15,46,0.98);
-    backdrop-filter: blur(10px);
+    height: 100svh;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0;
+    background: rgba(10, 15, 46, 0.98);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(201,168,76,0.3);
+    box-shadow: -4px 0 30px rgba(0,0,0,0.6);
+    animation: slideInRight 0.35s ease both;
+  }
+
+  /* Logo row — padded right so it doesn't overlap the hamburger */
+  .navOpen .logo {
+    padding: 1.25rem 4rem 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    flex-shrink: 0;
+  }
+
+  /* Hamburger button anchored to top-right corner of the drawer */
+  .navOpen .hamburger {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.5rem;
+  }
+
+  /* Nav links fill all available space */
+  .navOpen .links {
+    display: flex;
+    position: static;
+    height: auto;
+    flex: 1;
     flex-direction: column;
     gap: 0;
-    padding: 6rem 2rem 2rem;
-    transition: right 0.3s ease;
-    border-left: 1px solid rgba(201,168,76,0.2);
+    padding: 0.5rem 0;
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    overflow-y: auto;
   }
 
-  .linksOpen {
-    right: 0;
-  }
-
-  .link {
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(201,168,76,0.1);
-    width: 100%;
-    min-height: 44px;
+  .navOpen .link {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    min-height: 50px;
     display: flex;
     align-items: center;
+    font-size: 0.75rem;
+    transition: background 0.2s ease, padding-left 0.2s ease;
   }
 
-  .right {
-    position: fixed;
-    top: -100%;
-    right: 0;
-    width: 280px;
-    background: rgba(10,15,46,0.98);
-    padding: 2rem;
+  .navOpen .link:hover {
+    background: rgba(201,168,76,0.1);
+    padding-left: 2rem;
+  }
+
+  .navOpen .link::after {
+    display: none;
+  }
+
+  /* Lang switcher + BOOK NOW pinned at the very bottom of the drawer */
+  .navOpen .right {
+    display: flex;
+    position: static;
     flex-direction: column;
-    gap: 1.5rem;
-    transition: top 0.3s ease;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem calc(1.5rem + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid rgba(201,168,76,0.2);
+    flex-shrink: 0;
   }
 
-  .rightOpen {
-    top: calc(100vh - 180px);
-  }
-
-  .langSwitcher {
+  .navOpen .langSwitcher {
     width: 100%;
     justify-content: center;
   }
 
-  .cta {
+  .navOpen .langBtn {
+    flex: 1;
+    font-size: 0.65rem;
+  }
+
+  .navOpen .cta {
     width: 100%;
     text-align: center;
+    padding: 0.85rem 1.6rem;
+    font-size: 0.7rem;
   }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
 }

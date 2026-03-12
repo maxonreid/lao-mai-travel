@@ -16,12 +16,13 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${mobileOpen ? styles.navOpen : ''}`}>
       <Link href="/" className={styles.logo}>
         <div className={styles.logoText}>LAO MAI TRAVEL</div>
         <span className={styles.logoSub}>YOUR TRUSTED LOCAL TRAVEL PARTNER LAOS</span>
       </Link>
 
+      {/* Mobile Nav: hamburger toggle button (shown on small screens) */}
       <button 
         className={styles.hamburger}
         onClick={() => setMobileOpen(!mobileOpen)}
@@ -32,6 +33,7 @@ export default function Nav() {
         <span className={mobileOpen ? styles.hamburgerOpen : ''}></span>
       </button>
 
+      {/* Desktop Nav: primary links (becomes slide-out menu content on mobile) */}
       <ul className={`${styles.links} ${mobileOpen ? styles.linksOpen : ''}`}>
         {navLinks.map((l) => (
           <li key={l.label}>
@@ -46,6 +48,7 @@ export default function Nav() {
         ))}
       </ul>
 
+      {/* Desktop Nav: language switcher + CTA (also shown in mobile menu when open) */}
       <div className={`${styles.right} ${mobileOpen ? styles.rightOpen : ''}`}>
         <div className={styles.langSwitcher}>
           {(['EN', 'ລາວ'] as const).map((lang) => (
