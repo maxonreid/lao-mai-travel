@@ -6,11 +6,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['en', 'lo']
   const currentDate = new Date()
 
-  const routes: MetadataRoute.Sitemap = locales.flatMap((locale) => [
+  const routes: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/${locale}`,
+      url: baseUrl,
       lastModified: currentDate,
-      changeFrequency: 'weekly',
+      changeFrequency: 'daily',
       priority: 1,
       alternates: {
         languages: {
@@ -19,7 +19,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
-  ])
+    ...locales.map((locale) => ({
+      url: `${baseUrl}/${locale}`,
+      lastModified: currentDate,
+      changeFrequency: 'daily' as const,
+      priority: 1,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en`,
+          lo: `${baseUrl}/lo`,
+        },
+      },
+    })),
+  ]
 
   return routes
 }

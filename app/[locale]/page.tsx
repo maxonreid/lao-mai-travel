@@ -44,7 +44,7 @@ export default function HomePage() {
   return (
     <>
       <Nav />
-      <main>
+      <main itemScope itemType="https://schema.org/WebPage">
         <Hero />
         <Stats />
         <Destinations />
