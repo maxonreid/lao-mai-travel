@@ -171,11 +171,14 @@ export default function BookingForm() {
 
           <button
             type="submit"
-            className={styles.submit}
+            className={`${styles.submit} ${status === 'sent' ? styles.submitSuccess : ''}`}
             disabled={status === 'sending' || status === 'sent'}
           >
+            {status === 'sending' && (
+              <span className={styles.spinner} aria-hidden="true" />
+            )}
             {status === 'sending' ? 'SENDING...'
-              : status === 'sent'    ? 'INQUIRY SENT ✓'
+              : status === 'sent'    ? '✓ INQUIRY SENT'
               : status === 'error'   ? 'ERROR — TRY AGAIN'
               : 'SEND INQUIRY →'}
           </button>
