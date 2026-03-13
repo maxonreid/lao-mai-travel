@@ -3,11 +3,11 @@ import styles from './Hero.module.css'
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
-      <div className={styles.heroBg} />
+    <section className={styles.hero} aria-label="Hero section">
+      <div className={styles.heroBg} role="presentation" />
 
       <div className={styles.content}>
-        <div className={styles.eyebrow}>VIENTIANE, LAOS</div>
+        <p className={styles.eyebrow}>VIENTIANE, LAOS</p>
 
         <h1 className={styles.title}>
           Discover the<br />
@@ -22,13 +22,13 @@ export default function Hero() {
           heart of Laos — its people, landscapes, and living traditions.
         </p>
 
-        <div className={styles.actions}>
+        <nav className={styles.actions} aria-label="Primary actions">
           <a href="#tours" className={styles.btnPrimary}>EXPLORE TOURS</a>
           <a href="#contact" className={styles.btnGhost}>PLAN YOUR TRIP</a>
-        </div>
+        </nav>
       </div>
 
-      <div className={styles.scrollIndicator}>
+      <div className={styles.scrollIndicator} aria-hidden="true">
         <div className={styles.scrollLine} />
         <span className={styles.scrollLabel}>SCROLL</span>
       </div>
