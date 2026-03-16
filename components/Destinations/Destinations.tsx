@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import ImageWithSkeleton from '@/components/ImageWithSkeleton/ImageWithSkeleton'
 import styles from './Destinations.module.css'
 
 const destinations = [
@@ -53,7 +53,7 @@ export default function Destinations() {
             key={d.name}
             className={`${styles.card} ${d.featured ? styles.cardFeatured : ''}`}
           >
-            <Image
+            <ImageWithSkeleton
               src={d.img}
               alt={d.name}
               fill

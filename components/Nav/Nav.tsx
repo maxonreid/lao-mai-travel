@@ -16,9 +16,9 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <nav className={`${styles.nav} ${mobileOpen ? styles.navOpen : ''}`}>
-      <Link href="/" className={styles.logo}>
-        <div className={styles.logoText}>LAO MAI TRAVEL</div>
+    <nav className={`${styles.nav} ${mobileOpen ? styles.navOpen : ''}`} aria-label="Main navigation">
+      <Link href="/" className={styles.logo} aria-label="Lao Mai Travel homepage">
+        <span className={styles.logoText}>LAO MAI TRAVEL</span>
         <span className={styles.logoSub}>YOUR TRUSTED LOCAL TRAVEL PARTNER LAOS</span>
       </Link>
 

@@ -1,0 +1,61 @@
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Lao Mai Travel",
+  "description": "Your Trusted Local Travel Partner in Laos - Authentic travel experiences crafted by local experts",
+  "url": "https://laomaitravel.com",
+  "logo": "https://laomaitravel.com/img/logo.png",
+  "image": "https://laomaitravel.com/img/og-image.jpg",
+  "telephone": "+856-XXX-XXXX",
+  "email": "info@laomaitravel.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vientiane",
+    "addressCountry": "LA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "17.9757",
+    "longitude": "102.6331"
+  },
+  "sameAs": [
+    "https://www.facebook.com/laomaitravel",
+    "https://www.instagram.com/laomaitravel",
+    "https://www.tripadvisor.com/laomaitravel"
+  ],
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Laos"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Travel Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Day Tours",
+          "description": "Curated day trips around Vientiane and Laos"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Weekend Escapes",
+          "description": "Multi-day weekend tours exploring Laos"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Grand Laos Journeys",
+          "description": "Extended tours covering major destinations in Laos"
+        }
+      }
+    ]
+  }
+}
