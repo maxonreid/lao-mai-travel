@@ -9,6 +9,7 @@ import Panorama     from '@/components/Panorama/Panorama'
 import About        from '@/components/About/About'
 import Testimonial  from '@/components/Testimonial/Testimonial'
 import BookingForm  from '@/components/BookingForm/BookingForm'
+import Map          from '@/components/Map/Map'
 import Footer       from '@/components/Footer/Footer'
 
 type Props = {
@@ -47,14 +48,15 @@ export default function HomePage() {
       <Nav />
       <main itemScope itemType="https://schema.org/WebPage">
         <Hero />
-        <Stats />
+        {/* <Stats /> */}
         <Destinations />
-        <Tours />
+        {/* <Tours /> */}
         <TourPackages />
         <Panorama />
         <About />
         <Testimonial />
         <BookingForm />
+        <Map />
       </main>
       <Footer />
     </>

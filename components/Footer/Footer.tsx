@@ -59,7 +59,7 @@ export default function Footer() {
         <p>© {new Date().getFullYear()} Lao Mai Travel. All rights reserved.</p>
         <div className={styles.bottomLinks}>
           <Link href="/privacy">Privacy Policy</Link>
-          <a href="#">Terms of Service</a>
+          <Link href="/terms">Terms of Service</Link>
         </div>
       </div>
     </footer>

@@ -304,7 +304,8 @@ export default function TourPackages() {
               <div className={`${styles.body} ${open === i ? styles.bodyOpen : ''}`}>
 
                 {/* Gallery slider — only if photos exist */}
-                {t.gallery.length > 0 && (
+
+                {/* {t.gallery.length > 0 && (
                   <div className={styles.slider}>
                     <div className={styles.sliderTrack}>
                       <Image
@@ -336,7 +337,7 @@ export default function TourPackages() {
                       {currentSlide + 1} / {t.gallery.length}
                     </div>
                   </div>
-                )}
+                )} */}
 
                 <div className={styles.bodyInner}>
 
