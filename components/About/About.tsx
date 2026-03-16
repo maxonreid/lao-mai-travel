@@ -29,7 +29,7 @@ export default function About() {
         <div className={styles.imgWrap}>
           <div className={styles.imgMain}>
             <Image
-              src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80"
+              src="https://images.unsplash.com/photo-1723622688505-3efc54d4dbae?w=700&q=80"
               alt="Laos temple"
               fill
               className={styles.img}
@@ -38,7 +38,7 @@ export default function About() {
           </div>
           <div className={styles.imgAccent}>
             <Image
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80"
+              src="https://images.unsplash.com/photo-1441632260885-881646a7fd4d?w=400&q=80"
               alt="Laos landscape"
               fill
               className={styles.img}
@@ -58,7 +58,7 @@ export default function About() {
             Local Knowledge,<br /><em>World-Class</em> Service
           </h2>
           <p className={styles.body}>
-            Lao Mai Travel was founded by Lao locals with a single belief: the best way to
+            Lao Mai Travel was founded by Lath and Mai with a single belief: the best way to
             experience Laos is through the eyes of someone who grew up here. We don't just
             show you the sights — we share our home.
           </p>

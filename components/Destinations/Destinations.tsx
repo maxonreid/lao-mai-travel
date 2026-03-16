@@ -5,18 +5,18 @@ const destinations = [
   {
     name: 'Vientiane',
     tag: 'CAPITAL CITY · TEMPLES · MEKONG',
-    img: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&q=80',
+    img: 'https://images.unsplash.com/photo-1704212685546-3086abc1e6a1?w=900&q=80',
     featured: true,
   },
   {
     name: 'Luang Prabang',
     tag: 'UNESCO HERITAGE',
-    img: 'https://images.unsplash.com/photo-1707817615045-83732dff7d8d?w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1737037344843-7f6d4867d648?w=600&q=80',
   },
   {
     name: 'Vang Vieng',
     tag: 'KARST MOUNTAINS',
-    img: 'https://images.unsplash.com/photo-1534008897995-27a23e859048?w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=600&q=80',
   },
   {
     name: 'Bolaven Plateau',

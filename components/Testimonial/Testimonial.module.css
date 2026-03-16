@@ -10,7 +10,7 @@
   inset: 0;
   background:
     linear-gradient(rgba(10,15,46,0.82), rgba(10,15,46,0.82)),
-    url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1800&q=80') center / cover no-repeat;
+    url('https://images.unsplash.com/photo-1694785918647-b392a36aec75?w=1800&q=80') center / cover no-repeat;
   background-attachment: fixed;
   z-index: 0;
 }
