@@ -1,0 +1,184 @@
+.main {
+  background: var(--navy);
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.hero {
+  padding: 10rem clamp(1.5rem, 5vw, 4rem) 5rem;
+  max-width: 800px;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  opacity: 0.6;
+  max-width: 60ch;
+}
+
+/* ── CONTENT ── */
+.content {
+  padding: 4rem clamp(1.5rem, 5vw, 4rem) 6rem;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid rgba(201, 168, 76, 0.25);
+}
+
+.subsectionTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 0.82rem;
+  line-height: 1.9;
+  opacity: 0.65;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 0;
+}
+
+.list li {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  opacity: 0.65;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  opacity: 0.6;
+  font-size: 0.7rem;
+}
+
+.note {
+  font-size: 0.78rem;
+  line-height: 1.8;
+  color: var(--gold-pale);
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* ── CONTACT BLOCK ── */
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 1.75rem 2rem;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: rgba(201, 168, 76, 0.03);
+}
+
+.contactName {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+.contactItem a {
+  color: var(--gold-light);
+  transition: opacity 0.2s;
+}
+
+.contactItem a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 7rem;
+  }
+
+  .content {
+    padding-bottom: 4rem;
+  }
+}

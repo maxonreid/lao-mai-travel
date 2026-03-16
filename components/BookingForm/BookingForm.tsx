@@ -67,9 +67,9 @@ export default function BookingForm() {
             &ldquo;Every great journey begins with a single conversation.&rdquo;
           </div>
           <div className={styles.contacts}>
-            <div className={styles.contactItem}><span>📍</span><span>Vientiane, Lao PDR</span></div>
-            <div className={styles.contactItem}><span>📞</span><span>+856 20 XXXX XXXX</span></div>
-            <div className={styles.contactItem}><span>✉</span><span>info@laomaitravel.com</span></div>
+            <div className={styles.contactItem}><span>📍</span><span>Ban Viengkham, Sikhottabong District, Vientiane Capital</span></div>
+            <div className={styles.contactItem}><span>📞</span><a href="tel:+85620786906388">+856 20 7869 0388</a></div>
+            <div className={styles.contactItem}><span>✉</span><a href="mailto:info@laomaitravel.com">info@laomaitravel.com</a></div>
           </div>
         </div>
 

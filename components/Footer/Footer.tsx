@@ -47,9 +47,9 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <div className={styles.colTitle}>CONTACT</div>
-          <div className={styles.contactItem}><span>📍</span><span>Vientiane, Lao PDR</span></div>
-          <div className={styles.contactItem}><span>📞</span><span>+856 20 XXXX XXXX</span></div>
-          <div className={styles.contactItem}><span>✉</span><span>info@laomaitravel.com</span></div>
+          <div className={styles.contactItem}><span>📍</span><span>Ban Viengkham, Sikhottabong District, Vientiane Capital</span></div>
+          <div className={styles.contactItem}><span>📞</span><a href="tel:+85620786906388">+856 20 7869 0388</a></div>
+          <div className={styles.contactItem}><span>✉</span><a href="mailto:info@laomaitravel.com">info@laomaitravel.com</a></div>
           <div className={styles.contactItem}><span>🕐</span><span>Mon–Sat · 8:00–18:00</span></div>
         </div>
 
@@ -58,7 +58,7 @@ export default function Footer() {
       <div className={styles.bottom}>
         <p>© {new Date().getFullYear()} Lao Mai Travel. All rights reserved.</p>
         <div className={styles.bottomLinks}>
-          <a href="#">Privacy Policy</a>
+          <Link href="/privacy">Privacy Policy</Link>
           <a href="#">Terms of Service</a>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Hero         from '@/components/Hero/Hero'
 import Stats        from '@/components/Stats/Stats'
 import Destinations from '@/components/Destinations/Destinations'
 import Tours        from '@/components/Tours/Tours'
+import TourPackages from '@/components/TourPackages/TourPackages'
 import Panorama     from '@/components/Panorama/Panorama'
 import About        from '@/components/About/About'
 import Testimonial  from '@/components/Testimonial/Testimonial'
@@ -18,6 +19,7 @@ export default function HomePage() {
         <Stats />
         <Destinations />
         <Tours />
+        <TourPackages />
         <Panorama />
         <About />
         <Testimonial />
