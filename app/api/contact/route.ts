@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 // ── Rate limiting ─────────────────────────────────────────────────────────────
 // In-memory store: effective within a single server instance.
 // For multi-instance deployments, replace with an Upstash Redis rate limiter.
@@ -45,6 +43,7 @@ function sanitizeEmail(value: unknown): string | null {
 
 // ── Handler ───────────────────────────────────────────────────────────────────
 export async function POST(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY)
   const ip = getClientIp(req)
   if (isRateLimited(ip)) {
     return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
