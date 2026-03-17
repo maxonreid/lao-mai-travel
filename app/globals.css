@@ -52,6 +52,20 @@ a {
   text-decoration: none;
 }
 
+/* ── THAI FONT OVERRIDE ── */
+/* Sarabun replaces all Latin fonts when locale is Thai.
+   !important is intentional — Cinzel and Cormorant Garamond cannot
+   render Thai script, so Sarabun must take over unconditionally. */
+:lang(th),
+:lang(th) * {
+  font-family: 'Sarabun', sans-serif !important;
+}
+
+:lang(th) em {
+  font-style: italic;
+  font-weight: 200;
+}
+
 /* ── GLOBAL KEYFRAMES ── */
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-20px); }

@@ -1,25 +1,13 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import styles from './About.module.css'
 
-const features = [
-  {
-    icon: '🧭',
-    title: 'EXPERT LOCAL GUIDES',
-    desc: 'All guides are certified, locally born, and speak English and Lao fluently. They know the stories behind every stone.',
-  },
-  {
-    icon: '✦',
-    title: 'TAILORED ITINERARIES',
-    desc: 'Every journey is crafted around your pace, interests, and travel style — never a cookie-cutter group tour.',
-  },
-  {
-    icon: '🌿',
-    title: 'RESPONSIBLE TRAVEL',
-    desc: 'We partner with local communities, support sustainable practices, and ensure your visit creates a positive impact.',
-  },
-]
+const featureIcons = ['🧭', '✦', '🌿']
 
 export default function About() {
+  const t = useTranslations('about')
+  const features = t.raw('features') as Array<{ title: string; desc: string }>
+
   return (
     <section className={styles.section} id="about">
       <div className={styles.bgLandscape} />
@@ -46,26 +34,26 @@ export default function About() {
             />
           </div>
           <div className={styles.badge}>
-            <span className={styles.badgeNum}>8+</span>
-            <span className={styles.badgeLabel}>YEARS OF<br />EXCELLENCE</span>
+            <span className={styles.badgeNum}>{t('badgeNum')}</span>
+            <span className={styles.badgeLabel}>
+              {t('badgeLabel').split('\n').map((line, i) => (
+                <span key={i}>{i > 0 && <br />}{line}</span>
+              ))}
+            </span>
           </div>
         </div>
 
         {/* Text */}
         <div className={styles.text}>
-          <div className={styles.eyebrow}>WHO WE ARE</div>
+          <div className={styles.eyebrow}>{t('eyebrow')}</div>
           <h2 className={styles.title}>
-            Local Knowledge,<br /><em>World-Class</em> Service
+            {t('titleLine1')}<br /><em>{t('titleLine2')}</em>
           </h2>
-          <p className={styles.body}>
-            Lao Mai Travel was founded by Lath and Mai with a single belief: the best way to
-            experience Laos is through the eyes of someone who grew up here. We don't just
-            show you the sights — we share our home.
-          </p>
+          <p className={styles.body}>{t('body')}</p>
           <ul className={styles.features}>
-            {features.map((f) => (
+            {features.map((f, i) => (
               <li key={f.title} className={styles.feature}>
-                <div className={styles.featureIcon}>{f.icon}</div>
+                <div className={styles.featureIcon}>{featureIcons[i]}</div>
                 <div>
                   <div className={styles.featureTitle}>{f.title}</div>
                   <p className={styles.featureDesc}>{f.desc}</p>

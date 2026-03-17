@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import Nav          from '@/components/Nav/Nav'
 import Hero         from '@/components/Hero/Hero'
-import Stats        from '@/components/Stats/Stats'
 import Destinations from '@/components/Destinations/Destinations'
-import Tours        from '@/components/Tours/Tours'
 import TourPackages from '@/components/TourPackages/TourPackages'
 import Panorama     from '@/components/Panorama/Panorama'
 import About        from '@/components/About/About'
@@ -18,25 +16,25 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  
-  const titles = {
+
+  const titles: Record<string, string> = {
     en: 'Discover Authentic Laos Tours & Travel Experiences',
-    lo: 'ຄົ້ນພົບປະສົບການທ່ອງທ່ຽວລາວແທ້'
+    th: 'ค้นพบประสบการณ์ทัวร์และท่องเที่ยวลาวแท้',
   }
-  
-  const descriptions = {
+
+  const descriptions: Record<string, string> = {
     en: 'Explore Laos with local experts. Curated tours from Vientiane to Luang Prabang, cultural experiences, adventure travel, and authentic Lao journeys. Book your dream trip today.',
-    lo: 'ສໍາຫຼວດລາວກັບຜູ້ຊ່ຽວຊານທ້ອງຖິ່ນ. ທົວທັດທີ່ຄັດສັນຈາກນະຄອນຫຼວງວຽງຈັນໄປຫຼວງພະບາງ, ປະສົບການວັດທະນະທໍາ.'
+    th: 'สำรวจลาวกับผู้เชี่ยวชาญท้องถิ่น ทัวร์คัดสรรจากเวียงจันทน์ถึงหลวงพระบาง ประสบการณ์วัฒนธรรม และการเดินทางลาวแท้จริง จองทริปในฝันของคุณวันนี้',
   }
 
   return {
-    title: titles[locale as keyof typeof titles] || titles.en,
-    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+    title:       titles[locale]       ?? titles.en,
+    description: descriptions[locale] ?? descriptions.en,
     alternates: {
       canonical: `https://laomaitravel.com/${locale}`,
       languages: {
         en: 'https://laomaitravel.com/en',
-        lo: 'https://laomaitravel.com/lo',
+        th: 'https://laomaitravel.com/th',
       },
     },
   }
@@ -48,9 +46,7 @@ export default function HomePage() {
       <Nav />
       <main itemScope itemType="https://schema.org/WebPage">
         <Hero />
-        {/* <Stats /> */}
         <Destinations />
-        {/* <Tours /> */}
         <TourPackages />
         <Panorama />
         <About />

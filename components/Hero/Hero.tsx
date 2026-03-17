@@ -1,36 +1,34 @@
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import styles from './Hero.module.css'
 
 export default function Hero() {
+  const t = useTranslations('hero')
+
   return (
     <section className={styles.hero} aria-label="Hero section">
       <div className={styles.heroBg} role="presentation" />
 
       <div className={styles.content}>
-        <p className={styles.eyebrow}>VIENTIANE, LAOS</p>
+        <p className={styles.eyebrow}>{t('eyebrow')}</p>
 
         <h1 className={styles.title}>
-          Discover the<br />
-          <em>Soul of Laos</em>
+          {t('titleLine1')}<br />
+          <em>{t('titleLine2')}</em>
         </h1>
 
-        <p className={styles.subtitle}>Authentic journeys, trusted local expertise</p>
+        <p className={styles.subtitle}>{t('subtitle')}</p>
 
-        <p className={styles.body}>
-          From the golden temples of Vientiane to the misty highlands of the north,
-          Lao Mai Travel crafts immersive experiences that connect you with the true
-          heart of Laos — its people, landscapes, and living traditions.
-        </p>
+        <p className={styles.body}>{t('body')}</p>
 
         <nav className={styles.actions} aria-label="Primary actions">
-          <a href="#tours" className={styles.btnPrimary}>EXPLORE TOURS</a>
-          <a href="#contact" className={styles.btnGhost}>PLAN YOUR TRIP</a>
+          <a href="#packages" className={styles.btnPrimary}>{t('exploreTours')}</a>
+          <a href="#contact" className={styles.btnGhost}>{t('planTrip')}</a>
         </nav>
       </div>
 
       <div className={styles.scrollIndicator} aria-hidden="true">
         <div className={styles.scrollLine} />
-        <span className={styles.scrollLabel}>SCROLL</span>
+        <span className={styles.scrollLabel}>{t('scroll')}</span>
       </div>
     </section>
   )

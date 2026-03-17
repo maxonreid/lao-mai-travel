@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { useTranslations } from 'next-intl'
+import { CONTACT } from '@/lib/contact'
 import styles from './BookingForm.module.css'
 
 interface FormData {
@@ -13,37 +15,75 @@ interface FormData {
   message: string
 }
 
-const tourTypes  = ['Day Tour', '2-Day Tour', 'Grand Laos Tour', 'Custom Itinerary']
-const groupSizes = ['1–2 people', '3–5 people', '6–10 people', '10+ people']
+type FormErrors = Partial<Record<keyof FormData, string>>
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export default function BookingForm() {
+  const t = useTranslations('booking')
+  const tourTypes  = t.raw('tourTypes')  as string[]
+  const groupSizes = t.raw('groupSizes') as string[]
+
   const [form, setForm] = useState<FormData>({
     firstName: '',
     lastName: '',
     email: '',
-    tourType: tourTypes[0],
+    tourType:  tourTypes[0],
     groupSize: groupSizes[0],
     date: '',
     message: '',
   })
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [status,    setStatus]    = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [errors,    setErrors]    = useState<FormErrors>({})
+  const [submitted, setSubmitted] = useState(false)
+
+  const validate = (data: FormData): FormErrors => {
+    const errs: FormErrors = {}
+    if (!data.firstName.trim()) errs.firstName = t('validation.firstNameRequired')
+    if (!data.lastName.trim())  errs.lastName  = t('validation.lastNameRequired')
+    if (!data.email.trim())     errs.email     = t('validation.emailRequired')
+    else if (!EMAIL_RE.test(data.email)) errs.email = t('validation.emailInvalid')
+    return errs
+  }
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+    const { name, value } = e.target
+    const updated = { ...form, [name]: value }
+    setForm(updated)
+    // Clear the error for this field as the user corrects it
+    if (submitted && errors[name as keyof FormData]) {
+      const fresh = validate(updated)
+      setErrors(prev => ({ ...prev, [name as keyof FormData]: fresh[name as keyof FormData] }))
+    }
   }
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+    const errs = validate(form)
+    setErrors(errs)
+    setSubmitted(true)
+    if (Object.keys(errs).length > 0) return
+
     setStatus('sending')
     try {
       const res = await fetch('/api/contact', {
-        method: 'POST',
+        method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body:    JSON.stringify(form),
       })
-      setStatus(res.ok ? 'sent' : 'error')
+      if (res.ok) {
+        setStatus('sent')
+        setTimeout(() => {
+          setForm({ firstName: '', lastName: '', email: '', tourType: tourTypes[0], groupSize: groupSizes[0], date: '', message: '' })
+          setStatus('idle')
+          setErrors({})
+          setSubmitted(false)
+        }, 3000)
+      } else {
+        setStatus('error')
+      }
     } catch {
       setStatus('error')
     }
@@ -55,21 +95,16 @@ export default function BookingForm() {
 
         {/* Left — info */}
         <div className={styles.info}>
-          <div className={styles.eyebrow}>PLAN YOUR JOURNEY</div>
+          <div className={styles.eyebrow}>{t('eyebrow')}</div>
           <h2 className={styles.title}>
-            Book Your<br /><em>Laos Experience</em>
+            {t('titleLine1')}<br /><em>{t('titleLine2')}</em>
           </h2>
-          <p className={styles.desc}>
-            Tell us your dream trip — we&apos;ll get back to you within 24 hours with a
-            personalised itinerary and quote. No commitment required.
-          </p>
-          <div className={styles.tagline}>
-            &ldquo;Every great journey begins with a single conversation.&rdquo;
-          </div>
+          <p className={styles.desc}>{t('desc')}</p>
+          <div className={styles.tagline}>{t('tagline')}</div>
           <div className={styles.contacts}>
-            <div className={styles.contactItem}><span>📍</span><span>Ban Viengkham, Sikhottabong District, Vientiane Capital</span></div>
-            <div className={styles.contactItem}><span>📞</span><a href="tel:+85620786906388">+856 20 7869 0388</a></div>
-            <div className={styles.contactItem}><span>✉</span><a href="mailto:info@laomaitravel.com">info@laomaitravel.com</a></div>
+            <div className={styles.contactItem}><span>📍</span><span>{t('address')}</span></div>
+            <div className={styles.contactItem}><span>📞</span><a href={`tel:${CONTACT.phoneTel}`}>{CONTACT.phone}</a></div>
+            <div className={styles.contactItem}><span>✉</span><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></div>
           </div>
         </div>
 
@@ -77,76 +112,67 @@ export default function BookingForm() {
         <form className={styles.form} onSubmit={handleSubmit} noValidate>
           <div className={styles.row}>
             <div className={styles.group}>
-              <label className={styles.label} htmlFor="firstName">FIRST NAME</label>
+              <label className={styles.label} htmlFor="firstName">{t('labels.firstName')}</label>
               <input
                 id="firstName"
                 name="firstName"
                 type="text"
-                placeholder="Jean"
-                className={styles.input}
+                placeholder={t('placeholders.firstName')}
+                className={`${styles.input} ${errors.firstName ? styles.inputError : ''}`}
                 value={form.firstName}
                 onChange={handleChange}
-                required
+                aria-describedby={errors.firstName ? 'err-firstName' : undefined}
               />
+              {errors.firstName && <span id="err-firstName" className={styles.errorMsg} role="alert">{errors.firstName}</span>}
             </div>
             <div className={styles.group}>
-              <label className={styles.label} htmlFor="lastName">LAST NAME</label>
+              <label className={styles.label} htmlFor="lastName">{t('labels.lastName')}</label>
               <input
                 id="lastName"
                 name="lastName"
                 type="text"
-                placeholder="Dupont"
-                className={styles.input}
+                placeholder={t('placeholders.lastName')}
+                className={`${styles.input} ${errors.lastName ? styles.inputError : ''}`}
                 value={form.lastName}
                 onChange={handleChange}
-                required
+                aria-describedby={errors.lastName ? 'err-lastName' : undefined}
               />
+              {errors.lastName && <span id="err-lastName" className={styles.errorMsg} role="alert">{errors.lastName}</span>}
             </div>
           </div>
 
           <div className={styles.group}>
-            <label className={styles.label} htmlFor="email">EMAIL ADDRESS</label>
+            <label className={styles.label} htmlFor="email">{t('labels.email')}</label>
             <input
               id="email"
               name="email"
               type="email"
-              placeholder="jean@email.com"
-              className={styles.input}
+              placeholder={t('placeholders.email')}
+              className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
               value={form.email}
               onChange={handleChange}
-              required
+              aria-describedby={errors.email ? 'err-email' : undefined}
             />
+            {errors.email && <span id="err-email" className={styles.errorMsg} role="alert">{errors.email}</span>}
           </div>
 
           <div className={styles.row}>
             <div className={styles.group}>
-              <label className={styles.label} htmlFor="tourType">TOUR TYPE</label>
-              <select
-                id="tourType"
-                name="tourType"
-                className={styles.input}
-                value={form.tourType}
-                onChange={handleChange}
-              >
-                {tourTypes.map((t) => <option key={t}>{t}</option>)}
+              <label className={styles.label} htmlFor="tourType">{t('labels.tourType')}</label>
+              <select id="tourType" name="tourType" className={styles.input} value={form.tourType} onChange={handleChange}>
+                {tourTypes.map((type) => <option key={type}>{type}</option>)}
               </select>
             </div>
             <div className={styles.group}>
-              <label className={styles.label} htmlFor="groupSize">GROUP SIZE</label>
-              <select
-                id="groupSize"
-                name="groupSize"
-                className={styles.input}
-                value={form.groupSize}
-                onChange={handleChange}
-              >
-                {groupSizes.map((g) => <option key={g}>{g}</option>)}
+              <label className={styles.label} htmlFor="groupSize">{t('labels.groupSize')}</label>
+              <select id="groupSize" name="groupSize" className={styles.input} value={form.groupSize} onChange={handleChange}>
+                {groupSizes.map((size) => <option key={size}>{size}</option>)}
               </select>
             </div>
           </div>
 
           <div className={styles.group}>
-            <label className={styles.label} htmlFor="date">PREFERRED DATE</label>
+            <label className={styles.label} htmlFor="date">{t('labels.date')}</label>
             <input
               id="date"
               name="date"
@@ -158,11 +184,11 @@ export default function BookingForm() {
           </div>
 
           <div className={styles.group}>
-            <label className={styles.label} htmlFor="message">YOUR MESSAGE</label>
+            <label className={styles.label} htmlFor="message">{t('labels.message')}</label>
             <textarea
               id="message"
               name="message"
-              placeholder="Tell us about your dream trip..."
+              placeholder={t('placeholders.message')}
               className={styles.textarea}
               value={form.message}
               onChange={handleChange}
@@ -174,13 +200,11 @@ export default function BookingForm() {
             className={`${styles.submit} ${status === 'sent' ? styles.submitSuccess : ''}`}
             disabled={status === 'sending' || status === 'sent'}
           >
-            {status === 'sending' && (
-              <span className={styles.spinner} aria-hidden="true" />
-            )}
-            {status === 'sending' ? 'SENDING...'
-              : status === 'sent'    ? '✓ INQUIRY SENT'
-              : status === 'error'   ? 'ERROR — TRY AGAIN'
-              : 'SEND INQUIRY →'}
+            {status === 'sending' && <span className={styles.spinner} aria-hidden="true" />}
+            {status === 'sending' ? t('submit.sending')
+              : status === 'sent'  ? t('submit.sent')
+              : status === 'error' ? t('submit.error')
+              :                      t('submit.idle')}
           </button>
         </form>
 

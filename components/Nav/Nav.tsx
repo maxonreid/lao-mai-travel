@@ -1,29 +1,37 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
+import { useRouter, usePathname, Link } from '@/i18n/navigation'
 import styles from './Nav.module.css'
 
-const navLinks = [
-  { label: 'DESTINATIONS', href: '#destinations' },
-  { label: 'TOURS',        href: '#tours' },
-  { label: 'ABOUT',        href: '#about' },
-  { label: 'CONTACT',      href: '#contact' },
-]
-
 export default function Nav() {
-  const [locale, setLocale] = useState<'EN' | 'ລາວ'>('EN')
+  const t = useTranslations('nav')
+  const locale = useLocale()
+  const router = useRouter()
+  const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
+
+  const navLinks = [
+    { label: t('destinations'), href: '#destinations' },
+    { label: t('tours'),        href: '#packages' },
+    { label: t('about'),        href: '#about' },
+    { label: t('contact'),      href: '#contact' },
+  ]
+
+  const switchLocale = (newLocale: string) => {
+    router.replace(pathname, { locale: newLocale })
+  }
 
   return (
     <nav className={`${styles.nav} ${mobileOpen ? styles.navOpen : ''}`} aria-label="Main navigation">
       <Link href="/" className={styles.logo} aria-label="Lao Mai Travel homepage">
-        <span className={styles.logoText}>LAO MAI TRAVEL</span>
-        <span className={styles.logoSub}>YOUR TRUSTED LOCAL TRAVEL PARTNER LAOS</span>
+        <span className={styles.logoText}>{t('logoText')}</span>
+        <span className={styles.logoSub}>{t('logoSub')}</span>
       </Link>
 
       {/* Mobile Nav: hamburger toggle button (shown on small screens) */}
-      <button 
+      <button
         className={styles.hamburger}
         onClick={() => setMobileOpen(!mobileOpen)}
         aria-label="Toggle menu"
@@ -37,8 +45,8 @@ export default function Nav() {
       <ul className={`${styles.links} ${mobileOpen ? styles.linksOpen : ''}`}>
         {navLinks.map((l) => (
           <li key={l.label}>
-            <a 
-              href={l.href} 
+            <a
+              href={l.href}
               className={styles.link}
               onClick={() => setMobileOpen(false)}
             >
@@ -51,17 +59,17 @@ export default function Nav() {
       {/* Desktop Nav: language switcher + CTA (also shown in mobile menu when open) */}
       <div className={`${styles.right} ${mobileOpen ? styles.rightOpen : ''}`}>
         <div className={styles.langSwitcher}>
-          {(['EN', 'ລາວ'] as const).map((lang) => (
+          {(['en', 'th'] as const).map((lang) => (
             <button
               key={lang}
               className={`${styles.langBtn} ${locale === lang ? styles.langBtnActive : ''}`}
-              onClick={() => setLocale(lang)}
+              onClick={() => switchLocale(lang)}
             >
-              {lang}
+              {lang === 'en' ? 'EN' : 'ไทย'}
             </button>
           ))}
         </div>
-        <a href="#contact" className={styles.cta} onClick={() => setMobileOpen(false)}>BOOK NOW</a>
+        <a href="#contact" className={styles.cta} onClick={() => setMobileOpen(false)}>{t('bookNow')}</a>
       </div>
     </nav>
   )

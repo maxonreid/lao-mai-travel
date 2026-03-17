@@ -1,1 +1,553 @@
-{}
+{
+  "nav": {
+    "logoText": "LAO MAI TRAVEL",
+    "logoSub": "YOUR TRUSTED LOCAL TRAVEL PARTNER LAOS",
+    "destinations": "DESTINATIONS",
+    "tours": "TOURS",
+    "about": "ABOUT",
+    "contact": "CONTACT",
+    "bookNow": "BOOK NOW"
+  },
+  "hero": {
+    "eyebrow": "VIENTIANE, LAOS",
+    "titleLine1": "Discover the",
+    "titleLine2": "Soul of Laos",
+    "subtitle": "Authentic journeys, trusted local expertise",
+    "body": "From the golden temples of Vientiane to the misty highlands of the north, Lao Mai Travel crafts immersive experiences that connect you with the true heart of Laos — its people, landscapes, and living traditions.",
+    "exploreTours": "EXPLORE TOURS",
+    "planTrip": "PLAN YOUR TRIP",
+    "scroll": "SCROLL"
+  },
+  "destinations": {
+    "eyebrow": "EXPLORE LAOS",
+    "titleLine1": "Extraordinary",
+    "titleLine2": "Destinations",
+    "desc": "Laos holds some of Southeast Asia's most unspoiled landscapes and ancient heritage. Our local guides take you beyond the postcard — into village life, sacred temples, and cascading jungle waterfalls few travelers ever find.",
+    "items": [
+      { "name": "Vientiane",       "tag": "CAPITAL CITY · TEMPLES · MEKONG" },
+      { "name": "Luang Prabang",   "tag": "UNESCO HERITAGE" },
+      { "name": "Vang Vieng",      "tag": "KARST MOUNTAINS" },
+      { "name": "Bolaven Plateau", "tag": "COFFEE · WATERFALLS" },
+      { "name": "4,000 Islands",   "tag": "MEKONG DELTA" }
+    ]
+  },
+  "packages": {
+    "eyebrow": "SIGNATURE ITINERARIES",
+    "titlePrefix": "Our",
+    "titleEm": "Tour Packages",
+    "intro": "Off-the-beaten-path journeys through Laos' most extraordinary provinces. Each itinerary is led by expert local guides and shaped around authentic encounters with culture, nature, and community.",
+    "itinerary": "Itinerary",
+    "departureReturn": "Departure & Return:",
+    "priceIncludes": "Price Includes",
+    "priceExcludes": "Price Excludes",
+    "enquire": "Enquire About This Tour",
+    "tours": [
+      {
+        "region": "Northeastern Laos",
+        "province": "Huaphanh Province",
+        "name": "Hidden Legacy Houaphanh",
+        "highlight": "Discover history, ethnic culture, and mountain life in Laos' remote highlands",
+        "duration": "3 DAYS · 2 NIGHTS",
+        "departure": "Xam Neua (Sam Neua) — daily flight from Vientiane (11:20–12:20)",
+        "days": [
+          {
+            "title": "Day 1 – Arrival in Xam Neua",
+            "body": "Welcome to the remote capital of Houaphanh, a strategic stronghold where future leaders of Laos operated during the Secret War. Today, Xam Neua remains one of the most authentic provincial towns in the country. Overnight in Xam Neua."
+          },
+          {
+            "title": "Day 2 – Viengxay: The Underground Capital",
+            "body": "Discover the hidden underground capital of Laos at Viengxay Caves, where thousands of people lived inside limestone caves during the Secret War. Explore residences of revolutionary leaders, underground hospitals, meeting rooms, and living quarters — uncovering the remarkable story of resilience that shaped modern Laos. Overnight in Xam Neua."
+          },
+          {
+            "title": "Day 3 – Departure back to Vientiane",
+            "body": "Leisure time or visit Xam Neua morning market for souvenirs and photography. Reflect on the journey through Houaphanh's hidden landscapes and cultures before your departure from Sam Neua Airport."
+          }
+        ],
+        "includes": [
+          "Accommodation at hotels/homestays as specified",
+          "Professional tour guide in selected language",
+          "All transportation as stated in the itinerary",
+          "Meals from lunch on Day 1 to lunch on the final day",
+          "Entrance fees to all sites mentioned",
+          "Government tax"
+        ],
+        "excludes": [
+          "Gratuities for guide, driver, porter, and hotel staff",
+          "Meals not specified in the itinerary",
+          "International and domestic airfare",
+          "Optional tours and activities",
+          "Visa fees and travel insurance",
+          "Personal expenses"
+        ]
+      },
+      {
+        "region": "Northern Laos",
+        "province": "Phongsaly Province",
+        "name": "Hidden Tribes of Northern Phongsaly",
+        "highlight": "Explore Tai Lue, Akha, Haw, Phounoy, Yao and more across the remote mountains of northern Laos",
+        "duration": "3 DAYS · 2 NIGHTS",
+        "departure": "Your hotel in Phongsaly Town",
+        "days": [
+          {
+            "title": "Day 1 – Phongsaly → Boun Neua → Hill Tribe Villages → Ban Tha",
+            "body": "Depart from Phongsaly and drive north toward remote mountainous areas with impressive views. Visit Ban Ngai Neua, a traditional Tai Lue village known for its distinctive wooden houses. Continue to Akha villages including Pang Hok, observing unique customs, and a village shared by Haw (Hor) and Akha communities. Overnight homestay at Ban Tha with a local family."
+          },
+          {
+            "title": "Day 2 – Ban Tha → Ou Tai → Hill Tribe Villages → Ou Neua",
+            "body": "Continue north through some of the highest mountains in the region. Stop at Yao (Mien) and Kher communities to learn about traditional lifestyles. Enjoy panoramic views over the Yot Ou area before reaching Ou Neua for the night at a local guesthouse."
+          },
+          {
+            "title": "Day 3 – Ou Neua → Tai Neua Villages → Return to Phongsaly",
+            "body": "Explore villages around Ou Neua including Tai Neua ethnic communities. Begin the return journey to Phongsaly, stopping for additional village visits and beautiful northern landscapes. Arrive back in Phongsaly in the late afternoon."
+          }
+        ],
+        "includes": [
+          "Accommodation at hotels/homestays/campsites as specified",
+          "Professional tour guide in selected language",
+          "All transportation as stated in the itinerary",
+          "Meals from lunch on Day 1 to lunch on the final day",
+          "Entrance fees to all sites mentioned",
+          "Government tax"
+        ],
+        "excludes": [
+          "Gratuities for guide, driver, porter, and hotel staff",
+          "Meals not specified in the itinerary",
+          "International airfare",
+          "Optional tours and activities",
+          "Visa fees and travel insurance",
+          "Personal expenses"
+        ]
+      },
+      {
+        "region": "Northern Laos",
+        "province": "Oudomxay Province",
+        "name": "Hidden Villages of Oudomxay – Akha & Hmong Day Tour",
+        "highlight": "Sacred temples, natural hot springs, Akha handicrafts, a French airfield viewpoint, and a remote Hmong mountain village",
+        "duration": "1 DAY",
+        "departure": "Your hotel in Oudomxay Town",
+        "days": [
+          {
+            "title": "Full Day – Muang La, Akha Village & Hmong Village",
+            "body": "Scenic drive to Muang La to visit the sacred Phasingkham Buddha Temple and soak in rejuvenating natural hot springs. Continue to the Akha village of Kok Mai Ngai — walk through the village discovering daily life, traditional textiles, embroidery, and blacksmithing. Take in stunning valley views from the old French airfield. On the return, explore a remote Hmong village perched high in the mountains, step inside a local home (with permission), and enjoy genuine interactions with local families."
+          }
+        ],
+        "includes": [
+          "Professional tour guide in selected language",
+          "All transportation as stated in the itinerary",
+          "Lunch",
+          "Entrance fees to all sites mentioned",
+          "Government tax"
+        ],
+        "excludes": [
+          "Gratuities for guide, driver, porter, and hotel staff",
+          "Meals not specified in the itinerary",
+          "International airfare",
+          "Optional tours and activities",
+          "Visa fees and travel insurance",
+          "Personal expenses"
+        ]
+      },
+      {
+        "region": "Northern Laos",
+        "province": "Luang Namtha Province",
+        "name": "Wild Thrill Trails – Camping & Homestay",
+        "highlight": "Trek the pristine Nam Ha NPA, camp by the river, and stay in a remote Khmu village across three days of immersive jungle life",
+        "duration": "3 DAYS · 2 NIGHTS",
+        "departure": "Your hotel in Luang Namtha Town",
+        "days": [
+          {
+            "title": "Day 1 – Luang Namtha → Ban Chaleunsouk → Wild Banana Camp",
+            "body": "Meet your local guide at Ban Chaleunsouk and trek through farmland valleys and up a steep mountain, followed by a scenic ridge walk. Continue through dense canopy forest to reach Wild Banana Camp beside a peaceful river. Enjoy a nearby waterfall for bathing. In the evening, cook traditional Lao food with your guide, with an optional night walk for wildlife spotting."
+          },
+          {
+            "title": "Day 2 – Wild Banana Camp → Remote Khmu Village Homestay",
+            "body": "Explore an unfrequented jungle trail once used by hunters. Cross streams and hills through pristine forest with chances to spot wildlife, before arriving at a remote Khmu village. Stay overnight with a local family — interact with locals, play with children, or swim in the Nam Ha River."
+          },
+          {
+            "title": "Day 3 – Khmu Village → Doi Lakkham → Luang Namtha",
+            "body": "Depart after breakfast prepared by your host family. Trek through stunning jungle with towering 70-metre trees and abundant wildlife — birds, squirrels, monkeys, and civets. Reach the mountain peak before descending to Doi Lakkham, then return to Luang Namtha."
+          }
+        ],
+        "includes": [
+          "Accommodation at hotels/homestays/campsites as specified",
+          "Professional tour guide in selected language",
+          "All transportation as stated in the itinerary",
+          "Meals from lunch on Day 1 to lunch on the final day",
+          "Entrance fees to all sites mentioned",
+          "Government tax"
+        ],
+        "excludes": [
+          "Gratuities for guide, driver, porter, and hotel staff",
+          "Meals not specified in the itinerary",
+          "International airfare",
+          "Optional tours and activities",
+          "Visa fees and travel insurance",
+          "Personal expenses"
+        ]
+      },
+      {
+        "region": "Southern Laos",
+        "province": "Pakse, Champasak Province",
+        "name": "Bolaven Plateau Homestay Trek",
+        "highlight": "Coffee plantations, dramatic waterfalls, limestone cliffs, a village homestay with Baci ceremony, and an optional 300 m zipline above the twin falls",
+        "duration": "2 DAYS · 1 NIGHT",
+        "departure": "Your hotel in Pakse Town",
+        "days": [
+          {
+            "title": "Day 1 – Pakse → Bolaven Plateau → Tad Fane → Ban Nong Luang",
+            "body": "Drive up to the scenic Bolaven Plateau past coffee and tea plantations. Trek from Ban Hue Jiet Village through the Dan Sinxai limestone area to Champi Waterfall for a picnic lunch and swim. In the afternoon, visit the famous 220 m Tad Fane and Tad Yeung waterfalls before transferring to Ban Nong Luang for a homestay dinner and traditional Baci ceremony.\n\nOptional: Tad Fane Zipline — soar 300 m above the twin waterfalls, the highest zipline in Laos (USD 40/person)."
+          },
+          {
+            "title": "Day 2 – Ban Nong Luang → Dan Noy → Tad Chet Chanh → Pakse",
+            "body": "Hike to Dan Noy limestone cliffs overlooking Dong Hua Sao National Protected Area and a rare 1,000-year-old rosewood tree. Continue to Tad Chet Zun (7-level falls) and Tad Suea Waterfall through jungle rich with wild herbs and orchids. Take in vistas of the Champasak area and the Mekong River before returning to Pakse. (~2 hrs transfer + 5 hrs trekking)"
+          }
+        ],
+        "includes": [
+          "Accommodation at hotels/homestays/campsites as specified",
+          "Professional tour guide in selected language",
+          "All transportation as stated in the itinerary",
+          "Meals from lunch on Day 1 to lunch on the final day",
+          "Entrance fees to all sites mentioned",
+          "Government tax"
+        ],
+        "excludes": [
+          "Gratuities for guide, driver, porter, and hotel staff",
+          "Meals not specified in the itinerary",
+          "International airfare",
+          "Optional activities (e.g. zipline USD 40/person)",
+          "Visa fees and travel insurance",
+          "Personal expenses"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "WHO WE ARE",
+    "titleLine1": "Local Knowledge,",
+    "titleLine2": "World-Class Service",
+    "body": "Lao Mai Travel was founded by Lath and Mai with a single belief: the best way to experience Laos is through the eyes of someone who grew up here. We don't just show you the sights — we share our home.",
+    "badgeNum": "8+",
+    "badgeLabel": "YEARS OF\nEXCELLENCE",
+    "features": [
+      {
+        "title": "EXPERT LOCAL GUIDES",
+        "desc": "All guides are certified, locally born, and speak English and Lao fluently. They know the stories behind every stone."
+      },
+      {
+        "title": "TAILORED ITINERARIES",
+        "desc": "Every journey is crafted around your pace, interests, and travel style — never a cookie-cutter group tour."
+      },
+      {
+        "title": "RESPONSIBLE TRAVEL",
+        "desc": "We partner with local communities, support sustainable practices, and ensure your visit creates a positive impact."
+      }
+    ]
+  },
+  "panorama": {
+    "eyebrow": "ແຜ່ນດິນລ້ານຊ້າງ · THE LAND OF A MILLION ELEPHANTS",
+    "headlineLine1": "Where",
+    "headlineEm": "time slows",
+    "headlineLine2": "and wonder begins"
+  },
+  "testimonial": {
+    "quote": "Me and my friends had an amazing time with Lao Mai Travel. They arranged the motorcycles and guided us through the remote northern villages — every day felt like a new adventure. This is how Laos should be explored.",
+    "author": "MAXIMILIANO BRITO TORRRES · MEXICO CITY, MEXICO"
+  },
+  "booking": {
+    "eyebrow": "PLAN YOUR JOURNEY",
+    "titleLine1": "Book Your",
+    "titleLine2": "Laos Experience",
+    "desc": "Tell us your dream trip — we'll get back to you within 24 hours with a personalised itinerary and quote. No commitment required.",
+    "tagline": "\"Every great journey begins with a single conversation.\"",
+    "address": "Ban Viengkham, Sikhottabong District, Vientiane Capital",
+    "labels": {
+      "firstName": "FIRST NAME",
+      "lastName": "LAST NAME",
+      "email": "EMAIL ADDRESS",
+      "tourType": "TOUR TYPE",
+      "groupSize": "GROUP SIZE",
+      "date": "PREFERRED DATE",
+      "message": "YOUR MESSAGE"
+    },
+    "placeholders": {
+      "firstName": "Jean",
+      "lastName": "Dupont",
+      "email": "jean@email.com",
+      "message": "Tell us about your dream trip..."
+    },
+    "tourTypes": [
+      "Hidden Legacy Houaphanh",
+      "Hidden Tribes of Northern Phongsaly",
+      "Hidden Villages of Oudomxay – Akha & Hmong Day Tour",
+      "Wild Thrill Trails – Camping & Homestay",
+      "Bolaven Plateau Homestay Trek",
+      "Custom Itinerary"
+    ],
+    "groupSizes": [
+      "1–2 people",
+      "3–5 people",
+      "6–10 people",
+      "10+ people"
+    ],
+    "submit": {
+      "idle": "SEND INQUIRY →",
+      "sending": "SENDING...",
+      "sent": "✓ INQUIRY SENT",
+      "error": "ERROR — TRY AGAIN"
+    },
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Please enter a valid email address"
+    }
+  },
+  "map": {
+    "eyebrow": "FIND US",
+    "titlePrefix": "Our",
+    "titleEm": "Office",
+    "address": "Ban Viengkham, Sikhottabong District, Vientiane Capital, Lao PDR",
+    "hours": "Mon – Sat · 08:00 – 18:00",
+    "directions": "Get Directions →"
+  },
+  "footer": {
+    "brandName": "LAO MAI TRAVEL",
+    "brandSub": "YOUR TRUSTED LOCAL TRAVEL PARTNER LAOS",
+    "desc": "Crafting authentic Laos experiences since 2017. Local expertise, world-class service, responsible travel.",
+    "destinationsTitle": "DESTINATIONS",
+    "toursTitle": "TOURS",
+    "contactTitle": "CONTACT",
+    "destinations": [
+      "Vientiane",
+      "Luang Prabang",
+      "Vang Vieng",
+      "Bolaven Plateau",
+      "4,000 Islands"
+    ],
+    "tours": [
+      "Day Tours",
+      "2-Day Tours",
+      "Grand Laos Tours",
+      "Custom Itineraries",
+      "Group Tours"
+    ],
+    "address": "Ban Viengkham, Sikhottabong District, Vientiane Capital",
+    "hours": "Mon–Sat · 8:00–18:00",
+    "copyright": "© {year} Lao Mai Travel. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "notFound": {
+    "eyebrow": "ERROR 404",
+    "titleLine1": "Page Not",
+    "titleLine2": "Found",
+    "subtitle": "The page you're looking for seems to have wandered off the beaten path.",
+    "body": "It may have been moved, removed, or the address might be incorrect. Let us guide you back.",
+    "cta": "RETURN HOME",
+    "imageAlt": "Mountain scenery in Nam Ha National Protected Area"
+  },
+  "privacy": {
+    "eyebrow": "LEGAL",
+    "titleLine1": "Privacy",
+    "titleLine2": "Policy",
+    "subtitle": "Lao Mai Travel values your privacy and is committed to protecting your personal information. By using our website or booking with us, you agree to this policy.",
+    "contactSectionTitle": "10. Contact Us",
+    "contactSectionIntro": "If you have any questions or requests regarding this Privacy Policy or your personal data, please contact:",
+    "contactName": "Lao Mai Travel",
+    "contactAddress": "Ban Viengkham, Sikhottabong District, Vientiane Capital",
+    "sections": [
+      {
+        "title": "1. Information We Collect",
+        "subsections": [
+          {
+            "subtitle": "Personal Information",
+            "text": "You provide this information voluntarily when making an inquiry or booking. It may include:",
+            "list": [
+              "Full name",
+              "Contact details (email, phone, WhatsApp)",
+              "Nationality and passport information (when required for bookings)",
+              "Travel dates and preferences",
+              "Payment information"
+            ]
+          },
+          {
+            "subtitle": "Website Usage Information",
+            "text": "When you visit our website, we may collect general data such as:",
+            "list": [
+              "Pages viewed",
+              "Time spent on the site",
+              "Browser or device type",
+              "Cookies and usage data"
+            ],
+            "note": "This information does not personally identify you and is used to improve our website."
+          }
+        ]
+      },
+      {
+        "title": "2. How We Use Your Information",
+        "text": "The information we collect is used only for the following purposes:",
+        "list": [
+          "To process bookings, secure accommodation, and arrange travel itineraries",
+          "Booking accommodation, transport, and activities",
+          "To send promotional offers, newsletters, and updates about our services (with your consent)",
+          "Communicating with you before and during your trip",
+          "Meeting legal or regulatory requirements and ensuring the safety of our clients"
+        ],
+        "note": "We do not sell or rent your personal information."
+      },
+      {
+        "title": "3. Sharing Your Information",
+        "text": "We respect your privacy and only share your information when necessary:",
+        "list": [
+          "Hotels and accommodation providers",
+          "Transport companies (airlines, trains, etc.)",
+          "Local guides and activity providers",
+          "Government authorities (for permits or immigration)"
+        ],
+        "note": "These partners are required to use your information only for service purposes."
+      },
+      {
+        "title": "4. External Websites",
+        "text": "Our website may contain links to third-party websites. Lao Mai Travel is not responsible for the privacy practices or content of those sites."
+      },
+      {
+        "title": "5. Cookies",
+        "text": "We may use cookies to improve your browsing experience and analyse website traffic. You can disable cookies in your browser settings if you prefer."
+      },
+      {
+        "title": "6. Data Protection",
+        "text": "We take data security seriously and implement measures to protect your personal information:",
+        "list": [
+          "Encryption — Sensitive data such as payment details is encrypted during transmission.",
+          "Access Control — Only authorised personnel have access to your personal information.",
+          "Regular Audits — We conduct regular security reviews to safeguard your data."
+        ]
+      },
+      {
+        "title": "7. Legal Requirements",
+        "text": "We may disclose personal information if required by law, legal process, or government authorities, or to protect the rights and safety of our company and clients."
+      },
+      {
+        "title": "8. Your Rights",
+        "text": "You may request to:",
+        "list": [
+          "Access the personal information we hold about you",
+          "Correct inaccurate information",
+          "Withdraw consent for marketing communications",
+          "Request deletion of your data where permitted by law"
+        ]
+      },
+      {
+        "title": "9. Changes to This Policy",
+        "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page."
+      }
+    ]
+  },
+  "terms": {
+    "eyebrow": "LEGAL",
+    "titleLine1": "Terms &",
+    "titleLine2": "Conditions",
+    "subtitle": "Lao Mai Travel and Car Rental Service Sole Co., Ltd. These terms outline our mutual responsibilities and are designed to ensure a smooth and enjoyable journey for all travellers. By booking our services, you agree to the following terms.",
+    "tableHeaderTiming": "Timing",
+    "tableHeaderCharge": "Cancellation Charge",
+    "acceptanceTitle": "Acceptance of Terms",
+    "acceptanceBody": "By booking with Lao Mai Travel, you confirm that you have read, understood, and agreed to these Terms & Conditions. For any questions or assistance, please contact us — we are committed to ensuring your travel experience is smooth, safe, and memorable.",
+    "sections": [
+      {
+        "title": "1. Booking Procedure",
+        "list": [
+          "A 50% non-refundable deposit is required to confirm a tour booking.",
+          "Upon receipt of the deposit, we will issue a written booking confirmation and payment receipt.",
+          "Bookings are considered confirmed only after payment has been received.",
+          "The remaining balance must be paid no later than 30 days prior to the start date."
+        ]
+      },
+      {
+        "title": "2. Payment Terms",
+        "list": [
+          "All rates are quoted in US Dollars (USD) unless otherwise specified.",
+          "Prices are quoted net and inclusive of applicable VAT.",
+          "Lao Mai Travel reserves the right to adjust prices without prior notice in the event of changes in government taxes, fees, or regulations in Lao PDR.",
+          "Payments may be made via bank transfer, cash, or other agreed methods."
+        ]
+      },
+      {
+        "title": "3. Price and Product Accuracy",
+        "list": [
+          "Lao Mai Travel strives to ensure accuracy in pricing and service descriptions.",
+          "Final rates are confirmed at the time of payment. Any changes resulting from external factors (such as taxes, fees, or transportation costs) will be communicated promptly."
+        ]
+      },
+      {
+        "title": "4. Child Policy",
+        "list": [
+          "Children under 10 years old: 25% discount on tour services only.",
+          "Children aged 10 years and above: Full adult rate applies.",
+          "Accommodation policies for children may vary depending on the hotel."
+        ]
+      },
+      {
+        "title": "5. Cancellation Policy",
+        "note": "All cancellations must be made in writing and acknowledged by Lao Mai Travel.",
+        "table": [
+          { "when": "Less than 30 days before departure", "charge": "50% of total tour cost (100% for hotel bookings)" },
+          { "when": "Less than 7 days before departure",  "charge": "100% of total tour cost including hotels" },
+          { "when": "No-show",                            "charge": "100% of all services charged" }
+        ]
+      },
+      {
+        "title": "6. Travel Insurance",
+        "text": "Tour prices do not include travel insurance. We strongly recommend that all travelers obtain comprehensive travel insurance covering:",
+        "list": [
+          "Medical expenses",
+          "Emergency evacuation",
+          "Trip cancellation or interruption",
+          "Travel delays",
+          "Loss of personal belongings"
+        ],
+        "note": "By participating in the tour, clients acknowledge and accept the inherent risks associated with travel and agree that Lao Mai Travel shall not be held liable for incidents beyond its control."
+      },
+      {
+        "title": "7. Complaints and Dispute Resolution",
+        "subsections": [
+          {
+            "subtitle": "Immediate Reporting",
+            "text": "If you encounter any issues during your trip, please notify us immediately via our emergency contact number or your assigned travel specialist. We will make every effort to resolve the matter promptly."
+          },
+          {
+            "subtitle": "Post-Trip Complaints",
+            "text": "Formal complaints must be submitted in writing within 7 days after completion of the trip."
+          }
+        ]
+      },
+      {
+        "title": "8. Third-Party Suppliers",
+        "text": "Lao Mai Travel collaborates with carefully selected third-party providers, including:",
+        "list": [
+          "Hotels and accommodation providers",
+          "Airlines and train operators",
+          "Boat and transportation services",
+          "Local guides and activity providers",
+          "Restaurants and other service suppliers"
+        ],
+        "note": "While we strive to work with reliable partners, they operate under their own terms and conditions. Lao Mai Travel is not liable for their acts, errors, omissions, delays, or service disruptions. In the event of supplier changes or disruptions, we will endeavour to arrange suitable alternatives but cannot guarantee identical services or be responsible for additional costs incurred."
+      },
+      {
+        "title": "9. Force Majeure",
+        "text": "In rare cases of unforeseen circumstances beyond our control — such as severe weather, natural disasters, political unrest, epidemics, or transportation disruptions — Lao Mai Travel may:",
+        "list": [
+          "Offer adjusted travel dates or suitable alternatives",
+          "Communicate any additional costs transparently"
+        ],
+        "note": "While we will make every effort to minimise disruptions, we cannot be held responsible for non-refundable expenses or losses resulting from such events. Travel insurance is strongly recommended."
+      },
+      {
+        "title": "10. Personal Data Protection",
+        "list": [
+          "Your privacy is important to us. All personal information collected is stored securely and used solely for the purpose of arranging and delivering travel services.",
+          "Clients may opt out of marketing communications at any time."
+        ]
+      }
+    ]
+  }
+}

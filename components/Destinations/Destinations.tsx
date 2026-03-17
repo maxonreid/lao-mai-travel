@@ -1,50 +1,34 @@
+import { useTranslations } from 'next-intl'
 import ImageWithSkeleton from '@/components/ImageWithSkeleton/ImageWithSkeleton'
 import styles from './Destinations.module.css'
 
-const destinations = [
-  {
-    name: 'Vientiane',
-    tag: 'CAPITAL CITY · TEMPLES · MEKONG',
-    img: 'https://images.unsplash.com/photo-1704212685546-3086abc1e6a1?w=900&q=80',
-    featured: true,
-  },
-  {
-    name: 'Luang Prabang',
-    tag: 'UNESCO HERITAGE',
-    img: 'https://images.unsplash.com/photo-1737037344843-7f6d4867d648?w=600&q=80',
-  },
-  {
-    name: 'Vang Vieng',
-    tag: 'KARST MOUNTAINS',
-    img: 'https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=600&q=80',
-  },
-  {
-    name: 'Bolaven Plateau',
-    tag: 'COFFEE · WATERFALLS',
-    img: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80',
-  },
-  {
-    name: '4,000 Islands',
-    tag: 'MEKONG DELTA',
-    img: 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600&q=80',
-  },
+const destinationImages = [
+  { img: 'https://images.unsplash.com/photo-1704212685546-3086abc1e6a1?w=900&q=80', featured: true },
+  { img: 'https://images.unsplash.com/photo-1737037344843-7f6d4867d648?w=600&q=80' },
+  { img: 'https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=600&q=80' },
+  { img: '/img/destinations/bolaven-plateau/bolaven-plateau-trail.jpg' },
+  { img: '/img/destinations/4000-islands/4000-islands-SI-PHAN-DON.jpg' },
 ]
 
 export default function Destinations() {
+  const t = useTranslations('destinations')
+  const items = t.raw('items') as Array<{ name: string; tag: string }>
+
+  const destinations = items.map((item, i) => ({
+    ...item,
+    ...destinationImages[i],
+  }))
+
   return (
     <section className={styles.section} id="destinations">
       <div className={styles.intro}>
         <div>
-          <div className={styles.eyebrow}>EXPLORE LAOS</div>
+          <div className={styles.eyebrow}>{t('eyebrow')}</div>
           <h2 className={styles.title}>
-            Extraordinary<br /><em>Destinations</em>
+            {t('titleLine1')}<br /><em>{t('titleLine2')}</em>
           </h2>
         </div>
-        <p className={styles.desc}>
-          Laos holds some of Southeast Asia's most unspoiled landscapes and ancient heritage.
-          Our local guides take you beyond the postcard — into village life, sacred temples,
-          and cascading jungle waterfalls few travelers ever find.
-        </p>
+        <p className={styles.desc}>{t('desc')}</p>
       </div>
 
       <div className={styles.grid}>

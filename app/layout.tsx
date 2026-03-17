@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import ProgressBar from '@/components/ProgressBar/ProgressBar'
+import { CONTACT } from '@/lib/contact'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    alternateLocale: ['lo_LA'],
+    alternateLocale: ['th_TH'],
     url: 'https://laomaitravel.com',
     siteName: 'Lao Mai Travel',
     title: 'Lao Mai Travel – Your Trusted Local Travel Partner Laos',
@@ -75,14 +76,14 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && {
+    verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
+  }),
   alternates: {
     canonical: 'https://laomaitravel.com',
     languages: {
       'en': 'https://laomaitravel.com/en',
-      'lo': 'https://laomaitravel.com/lo',
+      'th': 'https://laomaitravel.com/th',
     },
   },
 }
@@ -111,7 +112,7 @@ export default function RootLayout({
       width: 1200,
       height: 630
     },
-    telephone: '+856-XXX-XXXX',
+    telephone: CONTACT.phoneTel,
     email: 'info@laomaitravel.com',
     address: {
       '@type': 'PostalAddress',
@@ -178,7 +179,7 @@ export default function RootLayout({
     publisher: {
       '@id': 'https://laomaitravel.com/#organization'
     },
-    inLanguage: ['en', 'lo']
+    inLanguage: ['en', 'th']
   }
 
   const breadcrumbSchema = {
@@ -203,7 +204,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500&family=Sarabun:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap"
           rel="stylesheet"
         />
         <meta name="theme-color" content="#c9a84c" />

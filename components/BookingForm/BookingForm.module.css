@@ -118,10 +118,30 @@
   appearance: none;
 }
 
+select.input {
+  color: var(--cream);
+}
+
+select.input option {
+  color: var(--cream);
+  background-color: var(--navy);
+}
+
 .input:focus,
 .textarea:focus {
   border-color: var(--gold);
   background: rgba(201,168,76,0.05);
+}
+
+.inputError {
+  border-color: #e05a5a !important;
+}
+
+.errorMsg {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  color: #e05a5a;
+  margin-top: 0.35rem;
 }
 
 .textarea {
