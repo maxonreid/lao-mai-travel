@@ -61,6 +61,10 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
 }
 
 .cardFeatured {

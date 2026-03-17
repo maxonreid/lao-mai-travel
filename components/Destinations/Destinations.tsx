@@ -1,5 +1,9 @@
+'use client'
+
+import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import ImageWithSkeleton from '@/components/ImageWithSkeleton/ImageWithSkeleton'
+import DestinationModal from './DestinationModal'
 import styles from './Destinations.module.css'
 
 const destinationImages = [
@@ -10,14 +14,24 @@ const destinationImages = [
   { img: '/img/destinations/4000-islands/4000-islands-SI-PHAN-DON.jpg' },
 ]
 
+interface Destination {
+  name: string
+  tag: string
+  description: string
+  img: string
+  featured?: boolean
+}
+
 export default function Destinations() {
   const t = useTranslations('destinations')
-  const items = t.raw('items') as Array<{ name: string; tag: string }>
+  const items = t.raw('items') as Array<{ name: string; tag: string; description: string }>
 
-  const destinations = items.map((item, i) => ({
+  const destinations: Destination[] = items.map((item, i) => ({
     ...item,
     ...destinationImages[i],
   }))
+
+  const [selected, setSelected] = useState<Destination | null>(null)
 
   return (
     <section className={styles.section} id="destinations">
@@ -33,9 +47,11 @@ export default function Destinations() {
 
       <div className={styles.grid}>
         {destinations.map((d) => (
-          <div
+          <button
             key={d.name}
             className={`${styles.card} ${d.featured ? styles.cardFeatured : ''}`}
+            onClick={() => setSelected(d)}
+            aria-label={`Learn more about ${d.name}`}
           >
             <ImageWithSkeleton
               src={d.img}
@@ -50,9 +66,17 @@ export default function Destinations() {
               <div className={styles.cardTag}>{d.tag}</div>
             </div>
             <div className={styles.cardArrow}>→</div>
-          </div>
+          </button>
         ))}
       </div>
+
+      {selected && (
+        <DestinationModal
+          destination={selected}
+          cta={t('modalCta')}
+          onClose={() => setSelected(null)}
+        />
+      )}
     </section>
   )
 }
