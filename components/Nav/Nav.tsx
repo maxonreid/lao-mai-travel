@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import { useRouter, usePathname, Link } from '@/i18n/navigation'
 import styles from './Nav.module.css'
@@ -26,8 +27,15 @@ export default function Nav() {
   return (
     <nav className={`${styles.nav} ${mobileOpen ? styles.navOpen : ''}`} aria-label="Main navigation">
       <Link href="/" className={styles.logo} aria-label="Lao Mai Travel homepage">
+        <Image 
+          src="/img/minimal-logo-no-bg.png" 
+          alt="Lao Mai Travel logo" 
+          width={40} 
+          height={40}
+          priority
+        />
         <span className={styles.logoText}>{t('logoText')}</span>
-        <span className={styles.logoSub}>{t('logoSub')}</span>
+        {/* <span className={styles.logoSub}>{t('logoSub')}</span> */}
       </Link>
 
       {/* Mobile Nav: hamburger toggle button (shown on small screens) */}

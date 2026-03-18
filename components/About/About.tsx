@@ -24,15 +24,6 @@ export default function About() {
               sizes="40vw"
             />
           </div>
-          <div className={styles.imgAccent}>
-            <Image
-              src="https://images.unsplash.com/photo-1441632260885-881646a7fd4d?w=400&q=80"
-              alt="Laos landscape"
-              fill
-              className={styles.img}
-              sizes="25vw"
-            />
-          </div>
           <div className={styles.badge}>
             <span className={styles.badgeNum}>{t('badgeNum')}</span>
             <span className={styles.badgeLabel}>
@@ -46,9 +37,24 @@ export default function About() {
         {/* Text */}
         <div className={styles.text}>
           <div className={styles.eyebrow}>{t('eyebrow')}</div>
-          <h2 className={styles.title}>
-            {t('titleLine1')}<br /><em>{t('titleLine2')}</em>
-          </h2>
+          <div className={styles.titleWrap}>
+            <h2 className={styles.title}>
+              {t('titleLine1')}<br /><em>{t('titleLine2')}</em>
+            </h2>
+            <div className={styles.imgAccent}>
+              
+              {/* Picture of the founder */}
+              <Image
+                src="/img/about/mr-lath-founder.jpeg"
+                alt="Founder Mr. Lath"
+                fill
+                className={styles.img}
+                sizes="(max-width: 640px) 45vw, 180px"
+              />
+
+              <span className={styles.founderLabel}>Mr. Lath - Founder</span>
+            </div>
+          </div>
           <p className={styles.body}>{t('body')}</p>
           <ul className={styles.features}>
             {features.map((f, i) => (
