@@ -24,11 +24,31 @@
     "titleLine2": "Destinations",
     "desc": "Laos holds some of Southeast Asia's most unspoiled landscapes and ancient heritage. Our local guides take you beyond the postcard — into village life, sacred temples, and cascading jungle waterfalls few travelers ever find.",
     "items": [
-      { "name": "Vientiane",       "tag": "CAPITAL CITY · TEMPLES · MEKONG",  "description": "The languid capital of Laos sits on a wide bend of the Mekong River, its gilded temples rising above tree-lined boulevards frozen in colonial time. Begin at Pha That Luang — the great golden stupa and national symbol — then wander to Wat Sisaket, the city's oldest temple, where thousands of miniature Buddhas line every wall. As the sun drops, join locals along the Mekong promenade and watch the sky turn amber over Thailand on the opposite bank." },
-      { "name": "Luang Prabang",   "tag": "UNESCO HERITAGE",                  "description": "A UNESCO World Heritage city where saffron-robed monks file through misty streets each dawn to collect alms — a ritual unchanged for centuries. Set between the Mekong and Nam Khan rivers, the old quarter is a patchwork of gilded wats, French colonial villas, and night markets scented with lemongrass. Day trips lead to the turquoise cascades of Kuang Si Falls and the sacred Pak Ou Caves, where thousands of Buddha images gaze from ancient riverside cliffs." },
-      { "name": "Vang Vieng",      "tag": "KARST MOUNTAINS",                  "description": "Dramatic karst limestone peaks rise straight from the Nam Song River, framing a town that has found its balance between adventure and serenity. Kayak through emerald gorges, explore hidden cave systems lit by stalactites, and cycle through rice paddies to remote Hmong villages. At dusk, the peaks turn amber and the riverbanks fill with the quiet hum of tuk-tuks and wood-fire smoke." },
-      { "name": "Bolaven Plateau", "tag": "COFFEE · WATERFALLS",              "description": "Rising over 1,300 metres above the Mekong lowlands, the Bolaven Plateau is Laos' coffee heartland — where arabica bushes stretch to the horizon beneath a cool, perpetual mist. Dozens of waterfalls plunge from the plateau's edge, including the twin cascades of Tad Fane and the thundering curtain of Tad Lo. Village homestays let you wake to roosters and freshly brewed Lao coffee still warm from the drying racks." },
-      { "name": "4,000 Islands",   "tag": "MEKONG DELTA",                     "description": "At the southern tip of Laos, the Mekong splinters into thousands of islands and sun-dappled channels, creating a slow, timeless world of hammocks, river sunsets, and the elusive Irrawaddy dolphin. Don Det and Don Khon offer riverside guesthouses and bicycle paths through coconut groves. Nearby, the Khone Phapheng Falls — the widest waterfall in Southeast Asia — thunder with extraordinary force, a reminder of the river's ancient, unstoppable power." }
+      {
+        "name": "Vientiane",
+        "tag": "CAPITAL CITY · TEMPLES · MEKONG",
+        "description": "The languid capital of Laos sits on a wide bend of the Mekong River, its gilded temples rising above tree-lined boulevards frozen in colonial time. Begin at Pha That Luang — the great golden stupa and national symbol — then wander to Wat Sisaket, the city's oldest temple, where thousands of miniature Buddhas line every wall. As the sun drops, join locals along the Mekong promenade and watch the sky turn amber over Thailand on the opposite bank."
+      },
+      {
+        "name": "Luang Prabang",
+        "tag": "UNESCO HERITAGE",
+        "description": "A UNESCO World Heritage city where saffron-robed monks file through misty streets each dawn to collect alms — a ritual unchanged for centuries. Set between the Mekong and Nam Khan rivers, the old quarter is a patchwork of gilded wats, French colonial villas, and night markets scented with lemongrass. Day trips lead to the turquoise cascades of Kuang Si Falls and the sacred Pak Ou Caves, where thousands of Buddha images gaze from ancient riverside cliffs."
+      },
+      {
+        "name": "Vang Vieng",
+        "tag": "KARST MOUNTAINS",
+        "description": "Dramatic karst limestone peaks rise straight from the Nam Song River, framing a town that has found its balance between adventure and serenity. Kayak through emerald gorges, explore hidden cave systems lit by stalactites, and cycle through rice paddies to remote Hmong villages. At dusk, the peaks turn amber and the riverbanks fill with the quiet hum of tuk-tuks and wood-fire smoke."
+      },
+      {
+        "name": "Bolaven Plateau",
+        "tag": "COFFEE · WATERFALLS",
+        "description": "Rising over 1,300 metres above the Mekong lowlands, the Bolaven Plateau is Laos' coffee heartland — where arabica bushes stretch to the horizon beneath a cool, perpetual mist. Dozens of waterfalls plunge from the plateau's edge, including the twin cascades of Tad Fane and the thundering curtain of Tad Lo. Village homestays let you wake to roosters and freshly brewed Lao coffee still warm from the drying racks."
+      },
+      {
+        "name": "4,000 Islands",
+        "tag": "MEKONG DELTA",
+        "description": "At the southern tip of Laos, the Mekong splinters into thousands of islands and sun-dappled channels, creating a slow, timeless world of hammocks, river sunsets, and the elusive Irrawaddy dolphin. Don Det and Don Khon offer riverside guesthouses and bicycle paths through coconut groves. Nearby, the Khone Phapheng Falls — the widest waterfall in Southeast Asia — thunder with extraordinary force, a reminder of the river's ancient, unstoppable power."
+      }
     ],
     "modalCta": "PLAN THIS TRIP"
   },
@@ -491,9 +511,18 @@
         "title": "5. Cancellation Policy",
         "note": "All cancellations must be made in writing and acknowledged by Lao Mai Travel.",
         "table": [
-          { "when": "Less than 30 days before departure", "charge": "50% of total tour cost (100% for hotel bookings)" },
-          { "when": "Less than 7 days before departure",  "charge": "100% of total tour cost including hotels" },
-          { "when": "No-show",                            "charge": "100% of all services charged" }
+          {
+            "when": "Less than 30 days before departure",
+            "charge": "50% of total tour cost (100% for hotel bookings)"
+          },
+          {
+            "when": "Less than 7 days before departure",
+            "charge": "100% of total tour cost including hotels"
+          },
+          {
+            "when": "No-show",
+            "charge": "100% of all services charged"
+          }
         ]
       },
       {
