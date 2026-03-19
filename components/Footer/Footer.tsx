@@ -58,6 +58,7 @@ export default function Footer() {
       <div className={styles.bottom}>
         <p>{t('copyright', { year: new Date().getFullYear() })}</p>
         <div className={styles.bottomLinks}>
+          <Link href="/company-profile">{t('companyProfile')}</Link>
           <Link href="/privacy">{t('privacy')}</Link>
           <Link href="/terms">{t('terms')}</Link>
         </div>

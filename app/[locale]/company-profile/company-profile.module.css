@@ -1,0 +1,460 @@
+.main {
+  background: var(--navy);
+  min-height: 100vh;
+}
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  overflow: hidden;
+  background: var(--navy);
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.heroImg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 15, 46, 0.92) 0%,
+    rgba(10, 15, 46, 0.5) 50%,
+    rgba(10, 15, 46, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 5;
+  padding: 5rem clamp(1.5rem, 5vw, 4rem) 5rem;
+  max-width: 860px;
+}
+
+.eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.companyFull {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-pale);
+  opacity: 0.7;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  opacity: 0.6;
+  max-width: 60ch;
+}
+
+/* ── Content wrapper ── */
+.content {
+  padding: 5rem clamp(1.5rem, 5vw, 4rem) 6rem;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* ── Shared section title ── */
+.sectionTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.text {
+  font-size: 0.83rem;
+  line-height: 1.95;
+  opacity: 0.65;
+}
+
+/* ── About + Founder ── */
+.aboutSection {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 5rem;
+  align-items: start;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.founderCard {
+  position: sticky;
+  top: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.founderImgWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  overflow: hidden;
+}
+
+.founderImg {
+  object-fit: cover;
+}
+
+.founderInfo {
+  padding: 1.25rem 1rem;
+  background: rgba(201, 168, 76, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.founderName {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: var(--gold-pale);
+}
+
+.founderRole {
+  font-size: 0.72rem;
+  opacity: 0.5;
+}
+
+/* ── Mission & Vision ── */
+.mvSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.mvCard {
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mvLabel {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mvLabel::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+
+.mvText {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  opacity: 0.65;
+  font-style: italic;
+}
+
+/* ── Services ── */
+.servicesSection {
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.serviceGroup {
+  padding: 2rem 1.75rem;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.serviceNum {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.25;
+  line-height: 1;
+}
+
+.serviceGroupTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-pale);
+  text-transform: uppercase;
+}
+
+.serviceList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.serviceList li {
+  font-size: 0.78rem;
+  line-height: 1.7;
+  opacity: 0.6;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.serviceList li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  opacity: 0.5;
+  font-size: 0.65rem;
+}
+
+/* ── Tagline ── */
+.taglineBox {
+  padding: 2.5rem 3rem;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  background: rgba(201, 168, 76, 0.03);
+  text-align: center;
+}
+
+.tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--gold-pale);
+  opacity: 0.8;
+}
+
+/* ── Contact ── */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+.contactItem a {
+  color: var(--gold-pale);
+  transition: opacity 0.2s;
+}
+
+.contactItem a:hover {
+  opacity: 0.9;
+}
+
+.directorCard {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.25rem 1.75rem;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: rgba(201, 168, 76, 0.04);
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+
+.directorName {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: var(--gold-pale);
+}
+
+.directorRole {
+  font-size: 0.72rem;
+  opacity: 0.5;
+}
+
+/* ── Photo Strip ── */
+.photoStrip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+  margin: -2rem 0;
+}
+
+.photoCell {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.photoImg {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.photoCell:hover .photoImg {
+  transform: scale(1.05);
+}
+
+/* ── Service Images ── */
+.serviceImgRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  margin-bottom: 3rem;
+}
+
+.serviceImgCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.serviceImgWrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.serviceImg {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.serviceImgCell:hover .serviceImg {
+  transform: scale(1.04);
+}
+
+.serviceImgLabel {
+  padding: 0.6rem 0.75rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+  background: rgba(201, 168, 76, 0.06);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-top: none;
+  opacity: 0.8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .aboutSection {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .founderCard {
+    position: static;
+    max-width: 280px;
+  }
+
+  .mvSection {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .photoStrip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .serviceImgRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroContent {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
+  .content {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    gap: 3.5rem;
+  }
+
+  .taglineBox {
+    padding: 2rem 1.5rem;
+  }
+
+  .photoStrip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

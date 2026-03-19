@@ -4,8 +4,10 @@
     "logoSub": "YOUR TRUSTED LOCAL TRAVEL PARTNER LAOS",
     "destinations": "DESTINATIONS",
     "tours": "TOURS",
+    "services": "SERVICES",
     "about": "ABOUT",
     "contact": "CONTACT",
+    "companyProfile": "COMPANY PROFILE",
     "bookNow": "BOOK NOW"
   },
   "hero": {
@@ -64,20 +66,22 @@
     "enquire": "Enquire About This Tour",
     "tours": [
       {
+        "slug": "hidden-legacy-houaphanh",
         "region": "Northeastern Laos",
         "province": "Huaphanh Province",
-        "name": "Hidden Legacy Houaphanh",
+        "name": "Hidden Legacy Houaphanh Enhanced",
         "highlight": "Discover history, ethnic culture, and mountain life in Laos' remote highlands",
         "duration": "3 DAYS · 2 NIGHTS",
-        "departure": "Xam Neua (Sam Neua) — daily flight from Vientiane (11:20–12:20)",
+        "departure": "Sam Neua Airport",
+        "intro": "Explore the hidden treasures of Houaphanh Province in northeastern Laos. From the secret underground city of Viengxay, where modern Laos was once governed, to remote ethnic villages nestled in dramatic mountains, this 3-day journey immerses travelers in authentic culture, history, and breathtaking scenery. Discover mountain communities, learn traditional crafts, and witness a side of Laos few visitors ever experience.",
         "days": [
           {
-            "title": "Day 1 – Arrival in Xam Neua",
-            "body": "Welcome to the remote capital of Houaphanh, a strategic stronghold where future leaders of Laos operated during the Secret War. Today, Xam Neua remains one of the most authentic provincial towns in the country. Overnight in Xam Neua."
+            "title": "Day 1 – Arrival in Xam Neua (Sam Neua)",
+            "body": "Welcome to the remote capital of Houaphanh, a strategic stronghold where future leaders of Laos operated during the Secret War. Today, Xam Neua remains one of the most authentic provincial towns in the country.\nFlight schedule: Daily flight from Vientiane (Departure: 11:20 – 12:20)\nEvening, Overnight: Xam Neua at your preferable hotel."
           },
           {
-            "title": "Day 2 – Viengxay: The Underground Capital",
-            "body": "Discover the hidden underground capital of Laos at Viengxay Caves, where thousands of people lived inside limestone caves during the Secret War. Explore residences of revolutionary leaders, underground hospitals, meeting rooms, and living quarters — uncovering the remarkable story of resilience that shaped modern Laos. Overnight in Xam Neua."
+            "title": "Day 2 – Viengxay: The Underground Capital of Laos",
+            "body": "Discover the hidden underground capital of Laos at Viengxay Caves, where thousands of people lived inside limestone caves during the Secret War. Explore the residences of revolutionary leaders, underground hospitals, meeting rooms, and living quarters, and uncover the remarkable story of resilience that shaped modern Laos.\nEvening, Overnight: Xam Neua at your preferable hotel."
           },
           {
             "title": "Day 3 – Departure back to Vientiane",
@@ -85,11 +89,11 @@
           }
         ],
         "includes": [
-          "Accommodation at hotels/homestays as specified",
-          "Professional tour guide in selected language",
+          "Accommodation at the hotels/homestays/campsites as specified in the itinerary",
+          "Professional tour guide in the selected language",
           "All transportation as stated in the itinerary",
-          "Meals from lunch on Day 1 to lunch on the final day",
-          "Entrance fees to all sites mentioned",
+          "Meals as indicated in the itinerary (from lunch on Day 1 to lunch on the final day)",
+          "Entrance fees to all sites mentioned in the program",
           "Government tax"
         ],
         "excludes": [
@@ -98,10 +102,11 @@
           "International and domestic airfare",
           "Optional tours and activities",
           "Visa fees and travel insurance",
-          "Personal expenses"
+          "Personal expenses of any nature"
         ]
       },
       {
+        "slug": "hidden-tribes-of-northern-phongsaly",
         "region": "Northern Laos",
         "province": "Phongsaly Province",
         "name": "Hidden Tribes of Northern Phongsaly",
@@ -110,24 +115,24 @@
         "departure": "Your hotel in Phongsaly Town",
         "days": [
           {
-            "title": "Day 1 – Phongsaly → Boun Neua → Hill Tribe Villages → Ban Tha",
-            "body": "Depart from Phongsaly and drive north toward remote mountainous areas with impressive views. Visit Ban Ngai Neua, a traditional Tai Lue village known for its distinctive wooden houses. Continue to Akha villages including Pang Hok, observing unique customs, and a village shared by Haw (Hor) and Akha communities. Overnight homestay at Ban Tha with a local family."
+            "title": "Day 1 – Phongsaly → Boun Neua → Huay Yeung → Ngai Neua → Pang Hok → Huay Ou → Ban Tha",
+            "body": "After breakfast, we depart from Phongsaly and drive north toward the remote mountainous areas of the province. The road is rugged and winding, but offers impressive views of the surrounding mountains and countryside.\n\nAlong the way, we visit Ban Ngai Neua, a traditional Tai Lue village known for its distinctive wooden houses and cultural heritage.\n\nWe then continue to visit several Akha villages, including Pang Hok, where you can observe the unique customs and traditional lifestyle of the Akha people. We will also visit a village inhabited by both Haw (Hor) and Akha communities.\n\nIn the evening, we arrive at Ban Tha village, where we will stay overnight with a local family and experience authentic village life."
           },
           {
             "title": "Day 2 – Ban Tha → Ou Tai → Hill Tribe Villages → Ou Neua",
-            "body": "Continue north through some of the highest mountains in the region. Stop at Yao (Mien) and Kher communities to learn about traditional lifestyles. Enjoy panoramic views over the Yot Ou area before reaching Ou Neua for the night at a local guesthouse."
+            "body": "Today we continue our journey further north toward Ou Neua. The drive takes us through some of the highest mountains in the region, offering spectacular views of valleys and remote settlements.\n\nAlong the way, we stop at several hill tribe villages, including Yao (Mien) and Kher communities, where visitors can learn about their traditional lifestyles and cultural practices.\n\nWe will also enjoy panoramic views over the Yot Ou area before continuing our journey to Ou Neua, where we spend the night at a local guesthouse."
           },
           {
             "title": "Day 3 – Ou Neua → Tai Neua Villages → Return to Phongsaly",
-            "body": "Explore villages around Ou Neua including Tai Neua ethnic communities. Begin the return journey to Phongsaly, stopping for additional village visits and beautiful northern landscapes. Arrive back in Phongsaly in the late afternoon."
+            "body": "After breakfast, we explore villages around Ou Neua, including communities of the Tai Neua ethnic group and other local tribes.\n\nFollowing the visits, we begin our return journey to Phongsaly, stopping along the way to visit additional villages and enjoy the beautiful landscapes of northern Laos.\n\nWe arrive back in Phongsaly in the late afternoon."
           }
         ],
         "includes": [
-          "Accommodation at hotels/homestays/campsites as specified",
-          "Professional tour guide in selected language",
+          "Accommodation at the hotels/homestays/campsites as specified in the itinerary",
+          "Professional tour guide in the selected language",
           "All transportation as stated in the itinerary",
-          "Meals from lunch on Day 1 to lunch on the final day",
-          "Entrance fees to all sites mentioned",
+          "Meals as indicated in the itinerary (from lunch on Day 1 to lunch on the final day)",
+          "Entrance fees to all sites mentioned in the program",
           "Government tax"
         ],
         "excludes": [
@@ -136,27 +141,36 @@
           "International airfare",
           "Optional tours and activities",
           "Visa fees and travel insurance",
-          "Personal expenses"
+          "Personal expenses of any nature"
         ]
       },
       {
+        "slug": "oudomxay-akha-hmong-day-tour",
         "region": "Northern Laos",
         "province": "Oudomxay Province",
         "name": "Hidden Villages of Oudomxay – Akha & Hmong Day Tour",
         "highlight": "Sacred temples, natural hot springs, Akha handicrafts, a French airfield viewpoint, and a remote Hmong mountain village",
         "duration": "1 DAY",
         "departure": "Your hotel in Oudomxay Town",
+        "highlights": [
+          "Visit sacred Phasingkham Buddha Temple and natural hot springs",
+          "Explore Akha village life, handicrafts, and culture",
+          "Climb to the French airfield viewpoint for panoramic scenery",
+          "Experience a remote Hmong village and meet local families",
+          "Learn about traditional lifestyles, weaving, and embroidery firsthand"
+        ],
+        "intro": "Step off the beaten path and immerse yourself in the rich culture and breathtaking landscapes of northern Laos. On this unforgettable day tour, you'll explore traditional Akha and Hmong villages, meet local families, and witness ancient customs that have been preserved for generations.",
         "days": [
           {
             "title": "Full Day – Muang La, Akha Village & Hmong Village",
-            "body": "Scenic drive to Muang La to visit the sacred Phasingkham Buddha Temple and soak in rejuvenating natural hot springs. Continue to the Akha village of Kok Mai Ngai — walk through the village discovering daily life, traditional textiles, embroidery, and blacksmithing. Take in stunning valley views from the old French airfield. On the return, explore a remote Hmong village perched high in the mountains, step inside a local home (with permission), and enjoy genuine interactions with local families."
+            "body": "Your adventure begins with a scenic drive to Muang La, where you'll visit the sacred Phasingkham Buddha Temple and soak in the rejuvenating natural hot springs. Continue to the Akha village of Kok Mai Ngai, walking through the village to discover daily life, traditional textiles, embroidery, and blacksmithing. Don't miss the stunning valley view from the old French airfield — a perfect photo opportunity!\n\nOn the way back, explore a remote Hmong village perched high in the mountains. Step inside a local home (with permission) to see authentic village life up close, learn about their traditions, and enjoy genuine interactions with the locals.\n\nThis immersive cultural journey is perfect for travelers who love authentic experiences, vibrant traditions, and stunning northern Laos scenery."
           }
         ],
         "includes": [
-          "Professional tour guide in selected language",
+          "Professional tour guide in the selected language",
           "All transportation as stated in the itinerary",
           "Lunch",
-          "Entrance fees to all sites mentioned",
+          "Entrance fees to all sites mentioned in the program",
           "Government tax"
         ],
         "excludes": [
@@ -165,10 +179,11 @@
           "International airfare",
           "Optional tours and activities",
           "Visa fees and travel insurance",
-          "Personal expenses"
+          "Personal expenses of any nature"
         ]
       },
       {
+        "slug": "wild-thrill-trails",
         "region": "Northern Laos",
         "province": "Luang Namtha Province",
         "name": "Wild Thrill Trails – Camping & Homestay",
@@ -178,23 +193,23 @@
         "days": [
           {
             "title": "Day 1 – Luang Namtha → Ban Chaleunsouk → Wild Banana Camp",
-            "body": "Meet your local guide at Ban Chaleunsouk and trek through farmland valleys and up a steep mountain, followed by a scenic ridge walk. Continue through dense canopy forest to reach Wild Banana Camp beside a peaceful river. Enjoy a nearby waterfall for bathing. In the evening, cook traditional Lao food with your guide, with an optional night walk for wildlife spotting."
+            "body": "After a 30-minute drive, meet your local guide at Ban Chaleunsouk village and begin trekking through farmland valleys and up a steep mountain, followed by a scenic ridge walk. Lunch is enjoyed along the way. Continue through dense canopy forest for about three hours to reach Wild Banana Camp, set beside a peaceful river. Enjoy time at a nearby waterfall for bathing and relaxation. In the evening, cook traditional Lao food with your guide, with an optional night walk for wildlife spotting."
           },
           {
             "title": "Day 2 – Wild Banana Camp → Remote Khmu Village Homestay",
-            "body": "Explore an unfrequented jungle trail once used by hunters. Cross streams and hills through pristine forest with chances to spot wildlife, before arriving at a remote Khmu village. Stay overnight with a local family — interact with locals, play with children, or swim in the Nam Ha River."
+            "body": "Explore an unfrequented jungle trail once used by hunters. Though the terrain is more challenging, the route is shorter, allowing a relaxed hike through pristine forest with chances to spot wildlife. Cross streams and hills before arriving at a remote Khmu village. Stay overnight with a local family, experiencing authentic village life. Spend the evening interacting with locals, playing with children, or swimming in the Nam Ha River."
           },
           {
-            "title": "Day 3 – Khmu Village → Doi Lakkham → Luang Namtha",
-            "body": "Depart after breakfast prepared by your host family. Trek through stunning jungle with towering 70-metre trees and abundant wildlife — birds, squirrels, monkeys, and civets. Reach the mountain peak before descending to Doi Lakkham, then return to Luang Namtha."
+            "title": "Day 3 – Remote Khmu Village → Doi Lakkham → Luang Namtha",
+            "body": "Depart the village after breakfast prepared by your host family, who will accompany you through the protected forest. Trek through a stunning jungle with towering 70-metre trees and abundant wildlife — birds, squirrels, monkeys, and civets. Reach the mountain peak before descending to Doi Lakkham, marking the end of this immersive jungle trekking adventure, then return to Luang Namtha."
           }
         ],
         "includes": [
-          "Accommodation at hotels/homestays/campsites as specified",
-          "Professional tour guide in selected language",
+          "Accommodation at the hotels/homestays/campsites as specified in the itinerary",
+          "Professional tour guide in the selected language",
           "All transportation as stated in the itinerary",
-          "Meals from lunch on Day 1 to lunch on the final day",
-          "Entrance fees to all sites mentioned",
+          "Meals as indicated in the itinerary (from lunch on Day 1 to lunch on the final day)",
+          "Entrance fees to all sites mentioned in the program",
           "Government tax"
         ],
         "excludes": [
@@ -203,41 +218,154 @@
           "International airfare",
           "Optional tours and activities",
           "Visa fees and travel insurance",
-          "Personal expenses"
+          "Personal expenses of any nature"
         ]
       },
       {
+        "slug": "bolaven-plateau-homestay",
         "region": "Southern Laos",
         "province": "Pakse, Champasak Province",
         "name": "Bolaven Plateau Homestay Trek",
-        "highlight": "Coffee plantations, dramatic waterfalls, limestone cliffs, a village homestay with Baci ceremony, and an optional 300 m zipline above the twin falls",
+        "highlight": "Experience the stunning Bolaven Plateau with lush coffee and tea plantations, dramatic limestone cliffs, and pristine forests. Visit breathtaking waterfalls including Tad Fane, Tad Yeung, and Champi, and immerse yourself in local culture with a homestay in Ban Nong Luang, traditional cuisine, and a Baci ceremony. Enjoy the optional Tad Fane zipline for a thrilling perspective of this magnificent highland region.",
         "duration": "2 DAYS · 1 NIGHT",
         "departure": "Your hotel in Pakse Town",
         "days": [
           {
             "title": "Day 1 – Pakse → Bolaven Plateau → Tad Fane → Ban Nong Luang",
-            "body": "Drive up to the scenic Bolaven Plateau past coffee and tea plantations. Trek from Ban Hue Jiet Village through the Dan Sinxai limestone area to Champi Waterfall for a picnic lunch and swim. In the afternoon, visit the famous 220 m Tad Fane and Tad Yeung waterfalls before transferring to Ban Nong Luang for a homestay dinner and traditional Baci ceremony.\n\nOptional: Tad Fane Zipline — soar 300 m above the twin waterfalls, the highest zipline in Laos (USD 40/person)."
+            "body": "Depart from Pakse and drive up to the scenic Bolaven Plateau, passing parts of the Ho Chi Minh trail and local coffee and tea plantations along the way. Begin your trek from Ban Hue Jiet Village (Ngae ethnic minority), walking through plantations and the stunning Dan Sinxai limestone area. Stop at Champi Waterfall for a picnic lunch and a refreshing swim.\n\nIn the afternoon, continue trekking to the famous 220 m Tad Fane Waterfall and Tad Yeung Waterfall. Transfer to Ban Nong Luang for your overnight stay. In the late afternoon, explore the village, enjoy dinner with your host family, and take part in a traditional Baci ceremony.\n\nOptional Activity: Tad Fane Zipline Adventure — soar 300 m above the twin waterfalls, the highest zipline in Laos, with four thrilling lines to choose from (USD 40/person).\n(~2.5 hours transfer + 2 hours trekking)"
           },
           {
-            "title": "Day 2 – Ban Nong Luang → Dan Noy → Tad Chet Chanh → Pakse",
-            "body": "Hike to Dan Noy limestone cliffs overlooking Dong Hua Sao National Protected Area and a rare 1,000-year-old rosewood tree. Continue to Tad Chet Zun (7-level falls) and Tad Suea Waterfall through jungle rich with wild herbs and orchids. Take in vistas of the Champasak area and the Mekong River before returning to Pakse. (~2 hrs transfer + 5 hrs trekking)"
+            "title": "Day 2 – Ban Nong Luang → Dan Noy → Dan Ngai → Tad Chet Chanh → Pakse",
+            "body": "After breakfast, bid farewell to your hosts and hike to Dan Noy limestone cliffs, enjoying breathtaking views of Dong Hua Sao National Protected Area and discovering a rare 1,000-year-old rosewood tree. Continue on an easy trek to Tad Chet Zun Waterfall (7-level falls) and Tad Suea Waterfall, passing through the jungle and spotting wild herbs and orchids. Take in the scenic vistas of the Champasak area and the Mekong River along the way.\n\nAfter lunch, hike back to the village via a different trail and transfer back to Pakse.\n(~2 hours transfer + 5 hours trekking)"
           }
         ],
         "includes": [
-          "Accommodation at hotels/homestays/campsites as specified",
-          "Professional tour guide in selected language",
+          "Accommodation at the hotels/homestays/campsites as specified in the itinerary",
+          "Professional tour guide in the selected language",
           "All transportation as stated in the itinerary",
-          "Meals from lunch on Day 1 to lunch on the final day",
-          "Entrance fees to all sites mentioned",
+          "Meals as indicated in the itinerary (from lunch on Day 1 to lunch on the final day)",
+          "Entrance fees to all sites mentioned in the program",
           "Government tax"
         ],
         "excludes": [
           "Gratuities for guide, driver, porter, and hotel staff",
           "Meals not specified in the itinerary",
           "International airfare",
-          "Optional activities (e.g. zipline USD 40/person)",
+          "Optional tours and activities",
           "Visa fees and travel insurance",
-          "Personal expenses"
+          "Personal expenses of any nature"
+        ]
+      },
+      {
+        "slug": "vientiane-culinary-cultural",
+        "region": "Vientiane Capital",
+        "province": "Vientiane Capital",
+        "name": "Vientiane Culinary & Cultural Experience",
+        "highlight": "A hands-on day of authentic Lao cooking, local cuisine, and cultural art in the heart of the capital city.",
+        "duration": "1 DAY",
+        "departure": "Your hotel in Vientiane",
+        "intro": "Experience the flavors and arts of Vientiane in a relaxed, immersive day program. Learn to cook traditional Lao dishes, enjoy your creations for lunch, and explore the city's vibrant art scene.",
+        "highlights": [
+          "Hands-on Lao cooking class with a local chef",
+          "Enjoy a delicious lunch of the dishes you've prepared",
+          "Visit the Lao Art Museum to admire traditional and contemporary Lao artworks",
+          "Comfortable transfers and guidance throughout"
+        ],
+        "days": [
+          {
+            "title": "Morning – Lao Cooking Class",
+            "body": "Depart from your hotel to a cooking studio or local kitchen, where you will participate in a hands-on cooking class, learning to prepare classic Lao dishes under the guidance of an experienced chef. Savor your creations for lunch, enjoying the authentic flavors of Lao cuisine."
+          },
+          {
+            "title": "Afternoon – Lao Art Museum",
+            "body": "Visit the Lao Art Museum, exploring artworks that showcase the country's rich cultural heritage and contemporary expressions. Return to your hotel in the late afternoon, concluding the tour."
+          }
+        ],
+        "includes": [
+          "English speaking guide",
+          "Private vehicle",
+          "Cooking experience with lunch",
+          "Drinking water",
+          "Entrance fees to all sites mentioned in the program",
+          "Government tax"
+        ],
+        "excludes": [
+          "Gratuities for guide, driver, porter, and hotel staff",
+          "Visa fees and travel insurance",
+          "Personal expenses of any nature"
+        ]
+      },
+      {
+        "slug": "vang-vieng-cycling-karsts",
+        "region": "Central Laos",
+        "province": "Vang Vieng",
+        "name": "Cycling the Karsts & Lagoons",
+        "highlight": "Mountain bike through dramatic limestone karsts, ancient caves, rural villages, and Vang Vieng's most beautiful Blue Lagoon.",
+        "duration": "1 DAY",
+        "departure": "Your hotel in Vang Vieng Town",
+        "intro": "Discover the beauty of Vang Vieng on an exciting mountain bike adventure through dramatic limestone landscapes, rural villages, caves, and one of the area's best Blue Lagoons.",
+        "highlights": [
+          "Cycle through spectacular karst scenery, rice paddies, and local villages",
+          "Visit scenic viewpoints for panoramic photos",
+          "Explore ancient limestone caves with impressive stalactites and stalagmites",
+          "Relax and swim at one of Vang Vieng's most beautiful Blue Lagoons",
+          "Experience the countryside beyond the town center"
+        ],
+        "days": [
+          {
+            "title": "Full Day – Karsts, Caves & Blue Lagoon",
+            "body": "Your adventure begins in Vang Vieng as you cycle across a traditional bamboo bridge over the Nam Song River, leaving the town behind for peaceful rural landscapes. Pedal past lush rice fields toward your first viewpoint — a perfect spot to admire the dramatic karst mountains and capture memorable photos.\n\nContinue riding through the stunning limestone range surrounding the Nam Song Valley. A short but steep hike leads to the cave entrance, where you will explore fascinating chambers filled with striking rock formations and learn about the cave's historical significance.\n\nBack on the bikes, follow a rugged trail along the narrow valley of the Houay San stream until the striking Pha Deng (\"Red Cliff\") appears on your right. Pause here for a short rest and more photos.\n\nThe route then leads to a small riverside village along the Nam Kouang River. From here, cycle south on a quiet road following the river until you reach one of the famous Blue Lagoons — a beautiful natural pool ideal for swimming, relaxing, and cooling off after the ride.\n\nAfter your break, cycle back to Vang Vieng, arriving in the late afternoon, often in time to enjoy the golden colors of sunset over the mountains.\n\nActivity Duration: Approx. 4 hours cycling / 1.5 hours cave exploration"
+          }
+        ],
+        "includes": [
+          "English speaking guide",
+          "Bicycle with helmets",
+          "Support vehicle",
+          "Lunch",
+          "Drinking water",
+          "Entrance fees to all sites mentioned in the program",
+          "Government tax"
+        ],
+        "excludes": [
+          "Gratuities for guide, driver, porter, and hotel staff",
+          "Visa fees and travel insurance",
+          "Personal expenses of any nature"
+        ]
+      },
+      {
+        "slug": "vang-vieng-cave-kayaking",
+        "region": "Central Laos",
+        "province": "Vang Vieng",
+        "name": "Vang Vieng Cave & Kayaking Experience",
+        "highlight": "Paddle the Nam Song River through limestone karsts, explore historic caves, visit an organic farm, and discover the legend of Vang Vieng's Magic Stone.",
+        "duration": "1 DAY",
+        "departure": "Your hotel in Vang Vieng Town",
+        "intro": "Discover the natural beauty and hidden history of Vang Vieng on this full-day adventure combining kayaking along the Nam Song River with exploration of ancient limestone caves.",
+        "highlights": [
+          "Paddle the Nam Song River, surrounded by stunning limestone karsts and lush scenery",
+          "Navigate gentle rapids suitable for beginners — no prior kayaking experience needed",
+          "Explore historic caves, including Elephant Cave and Tham None, with fascinating stories and rock formations",
+          "Visit a riverside organic farm to taste local mulberry tea and fruit wines",
+          "Enjoy a picnic lunch along the riverbank in a tranquil natural setting"
+        ],
+        "days": [
+          {
+            "title": "Full Day – Kayaking, Caves & Organic Farm",
+            "body": "Your day begins with a short transfer from Vang Vieng to the river. After a quick paddling lesson and safety briefing, set off down the Nam Song, gliding past dramatic limestone mountains and small rapids.\n\nThe first stop is Tham Xang (Elephant Cave). Walk up into this massive, theater-like cave while learning about its history and significance to local communities.\n\nAfter the cave, enjoy a riverside picnic lunch before continuing downstream to the Organic Farm, where mulberry tea and a variety of local fruit wines are produced.\n\nThe journey continues to Tham None Cave, one of the largest in the area. Used as a bomb shelter during the Second Indochina War, it is now home to bats and the legendary \"Magic Stone of Vang Vieng,\" which your guide will explain.\n\nThe final leg is a gentle paddle back to Vang Vieng town, arriving in time to admire the sunset over the river and karst peaks.\n\nDuration: 15 min transfer / 4.5 h kayaking (wet season) / 3.5 h kayaking (dry season) / 1.5 h cave exploration and walking"
+          }
+        ],
+        "includes": [
+          "Professional tour guide in the selected language",
+          "Kayak with paddles and safety equipment",
+          "Support vehicle",
+          "Lunch",
+          "Entrance fees to all sites mentioned in the program",
+          "Government tax"
+        ],
+        "excludes": [
+          "Gratuities for guide, driver, porter, and hotel staff",
+          "Visa fees and travel insurance",
+          "Personal expenses of any nature"
         ]
       }
     ]
@@ -246,7 +374,7 @@
     "eyebrow": "WHO WE ARE",
     "titleLine1": "Local Knowledge,",
     "titleLine2": "World-Class Service",
-    "body": "Lao Mai Travel was founded by Mr Lath, who has been part of the tourism industry since 2005. He began his career as a sales officer and worked his way up to sales manager. Throughout his journey, he travelled extensively across Laos and other Asian countries, participating in tourism events and building a strong professional network. His career path reflects hard work, perseverance, and a deep understanding of the travel industry at every level",
+    "body": "Lao Mai Travel was founded by Latsamy SENGPHOMMACHANH, who has been part of the tourism industry since 2005. He began his career as a sales officer and worked his way up to sales manager. Throughout his journey, he travelled extensively across Laos and other Asian countries, participating in tourism events and building a strong professional network. His career path reflects hard work, perseverance, and a deep understanding of the travel industry at every level.",
     "badgeNum": "8+",
     "badgeLabel": "YEARS OF\nEXCELLENCE",
     "features": [
@@ -269,6 +397,26 @@
     "headlineLine1": "Where",
     "headlineEm": "time slows",
     "headlineLine2": "and wonder begins"
+  },
+  "services": {
+    "eyebrow": "WHAT WE OFFER",
+    "titleLine1": "Our",
+    "titleLine2": "Services",
+    "intro": "Beyond guided tours, we provide end-to-end travel support so every detail of your Laos journey is taken care of.",
+    "items": [
+      {
+        "title": "ACCOMMODATION",
+        "desc": "We arrange comfortable, carefully selected stays — from boutique riverside guesthouses to heritage hotels — matched to your budget and travel style."
+      },
+      {
+        "title": "TICKETING",
+        "desc": "Domestic and international flight bookings, bus passes, and activity tickets handled efficiently so you can focus on the experience, not the logistics."
+      },
+      {
+        "title": "TRANSPORTATION SERVICE",
+        "desc": "Private vehicles, airport transfers, boat charters, and tuk-tuks — we coordinate all ground transport throughout your entire Laos journey."
+      }
+    ]
   },
   "testimonial": {
     "quote": "Me and my friends had an amazing time with Lao Mai Travel. They arranged the motorcycles and guided us through the remote northern villages — every day felt like a new adventure. This is how Laos should be explored.",
@@ -297,11 +445,14 @@
       "message": "Tell us about your dream trip..."
     },
     "tourTypes": [
-      "Hidden Legacy Houaphanh",
+      "Hidden Legacy Houaphanh Enhanced",
       "Hidden Tribes of Northern Phongsaly",
       "Hidden Villages of Oudomxay – Akha & Hmong Day Tour",
       "Wild Thrill Trails – Camping & Homestay",
       "Bolaven Plateau Homestay Trek",
+      "Vientiane Culinary & Cultural Experience",
+      "Cycling the Karsts & Lagoons",
+      "Vang Vieng Cave & Kayaking Experience",
       "Custom Itinerary"
     ],
     "groupSizes": [
@@ -355,6 +506,7 @@
     "address": "Ban Viengkham, Sikhottabong District, Vientiane Capital",
     "hours": "Mon–Sat · 8:00–18:00",
     "copyright": "© {year} Lao Mai Travel. All rights reserved.",
+    "companyProfile": "Company Profile",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
   },
@@ -463,6 +615,58 @@
         "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page."
       }
     ]
+  },
+  "companyProfile": {
+    "eyebrow": "COMPANY PROFILE",
+    "titleLine1": "Lao Mai",
+    "titleLine2": "Travel",
+    "companyFull": "Lao Mai Travel and Car Rental Service Sole Co., Ltd.",
+    "subtitle": "A fresh and dynamic travel company committed to delivering safe, efficient, and high-quality travel experiences across Laos.",
+    "aboutTitle": "About Us",
+    "aboutBody": "Lao Mai Travel and Car Rental Service Sole Co., Ltd. is a newly established, fresh, and dynamic player in the industry, bringing a new level of expertise and service excellence to the travel sector. Committed to delivering safe, efficient, and high-quality travel experiences, we provide seamless transport solutions tailored to customer needs. With a team of skilled professionals, we ensure comfort and reliability for every journey.",
+    "teamTitle": "Our Team",
+    "founderName": "Latsamy SENGPHOMMACHANH",
+    "founderRole": "Founder & Managing Director",
+    "founderBio": "Latsamy SENGPHOMMACHANH has been part of the tourism industry since 2005. He began his career as a sales officer and worked his way up to sales manager. Throughout his journey, he travelled extensively across Laos and other Asian countries, participating in tourism events and building a strong professional network. His career path reflects hard work, perseverance, and a deep understanding of the travel industry at every level.",
+    "missionTitle": "Our Mission",
+    "missionBody": "To provide exceptional travel and transport services that showcase the beauty of Laos while maintaining the highest standards of professionalism, safety, and customer satisfaction.",
+    "visionTitle": "Our Vision",
+    "visionBody": "To become the leading travel and transportation company in Laos, known for our outstanding service, local expertise, and commitment to sustainable tourism.",
+    "servicesTitle": "Our Services",
+    "serviceGroups": [
+      {
+        "title": "Tour Packages",
+        "items": [
+          "Cultural & Heritage Tours",
+          "Nature & Adventure Tours",
+          "Custom Private Tours",
+          "Tailor Made Programs"
+        ]
+      },
+      {
+        "title": "Transportation Services",
+        "items": [
+          "Private Transfers (Airport, Hotel, Sightseeing)",
+          "Group Travel & Corporate Transport",
+          "VIP & Luxury Car Services",
+          "Logistics & Charter Services"
+        ]
+      },
+      {
+        "title": "Travel Assistance",
+        "items": [
+          "Hotel & Accommodation Booking",
+          "Tour Guide Services",
+          "Visa & Travel Consultation",
+          "Ticketing Services (Flights and Trains)"
+        ]
+      }
+    ],
+    "tagline": "Let Lao Mai Travel and Car Rental Service Sole Co., Ltd. take you on a journey through the heart of Laos — with comfort, adventure, and unforgettable experiences.",
+    "contactTitle": "Contact Us",
+    "address": "Ban Viengkham, Sikhottabong District, Vientiane Capital",
+    "contactName": "Latsamy SENGPHOMMACHANH",
+    "contactRole": "Managing Director"
   },
   "terms": {
     "eyebrow": "LEGAL",

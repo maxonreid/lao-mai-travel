@@ -1,0 +1,342 @@
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  overflow: hidden;
+  background: var(--navy);
+  display: flex;
+  align-items: flex-end;
+}
+
+.heroImg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 15, 46, 0.88) 0%,
+    rgba(10, 15, 46, 0.35) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.backLink {
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  padding: 0.5rem clamp(1.5rem, 5vw, 4rem);
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  text-decoration: none;
+  text-transform: uppercase;
+  z-index: 10;
+  transition: color 0.25s;
+}
+
+.backLink:hover {
+  color: var(--gold-light);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 5;
+  padding: 3rem clamp(1.5rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.heroRegion {
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+  margin: 0;
+}
+
+.heroDuration {
+  font-family: 'Cinzel', serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.22em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+}
+
+/* ── GALLERY GRID ── */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 3px;
+  background: #000;
+}
+
+.galleryCell {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.galleryCell:hover .galleryImg {
+  transform: scale(1.04);
+}
+
+/* ── MAIN CONTENT ── */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  padding: 5rem clamp(1.5rem, 5vw, 4rem);
+  background: var(--navy);
+  color: var(--cream);
+}
+
+/* ── LEFT COLUMN ── */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tourIntro {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+}
+
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  background: rgba(201, 168, 76, 0.04);
+}
+
+.highlightItem {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  opacity: 0.75;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.highlightItem::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  font-size: 0.5rem;
+  color: var(--gold);
+  top: 0.25em;
+}
+
+.itineraryLabel {
+  font-family: 'Cinzel', serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.itineraryLabel::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+
+.days {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.day {
+  padding-left: 1rem;
+  border-left: 2px solid rgba(201, 168, 76, 0.3);
+}
+
+.dayTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.dayBody {
+  font-size: 0.78rem;
+  line-height: 1.85;
+  opacity: 0.62;
+  white-space: pre-line;
+}
+
+.departure {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(201, 168, 76, 0.12);
+  font-size: 0.78rem;
+  opacity: 0.6;
+  line-height: 1.6;
+}
+
+.departureLabel {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.22em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+/* ── RIGHT COLUMN ── */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-self: start;
+  position: sticky;
+  top: 6rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  padding: 2rem;
+}
+
+.metaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.metaLabel {
+  font-family: 'Cinzel', serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.metaLabel::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+
+.metaList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metaInclude,
+.metaExclude {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  opacity: 0.7;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.metaInclude::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.65rem;
+  top: 0.05em;
+}
+
+.metaExclude::before {
+  content: '\00D7';
+  position: absolute;
+  left: 0;
+  color: rgba(201, 168, 76, 0.4);
+  font-size: 0.8rem;
+  top: -0.05em;
+}
+
+.cta {
+  display: block;
+  padding: 0.95rem 1.5rem;
+  border: 1px solid rgba(201, 168, 76, 0.55);
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  margin-top: auto;
+}
+
+.cta:hover {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem clamp(1.25rem, 4vw, 2.5rem);
+  }
+
+  .right {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTitle {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .content {
+    padding: 2.5rem 1rem;
+  }
+}

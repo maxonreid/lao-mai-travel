@@ -14,10 +14,12 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const navLinks = [
-    { label: t('destinations'), href: '#destinations' },
-    { label: t('tours'),        href: '#packages' },
-    { label: t('about'),        href: '#about' },
-    { label: t('contact'),      href: '#contact' },
+    { label: t('destinations'),    href: '#destinations' },
+    { label: t('tours'),           href: '#packages' },
+    { label: t('services'),        href: '#services' },
+    { label: t('about'),           href: '#about' },
+    { label: t('contact'),         href: '#contact' },
+    { label: t('companyProfile'),  href: '/company-profile' },
   ]
 
   const switchLocale = (newLocale: string) => {
@@ -53,13 +55,19 @@ export default function Nav() {
       <ul className={`${styles.links} ${mobileOpen ? styles.linksOpen : ''}`}>
         {navLinks.map((l) => (
           <li key={l.label}>
-            <a
-              href={l.href}
-              className={styles.link}
-              onClick={() => setMobileOpen(false)}
-            >
-              {l.label}
-            </a>
+            {l.href.startsWith('#') ? (
+              <Link
+                href={`/${l.href}`}
+                className={styles.link}
+                onClick={() => setMobileOpen(false)}
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <Link href={l.href} className={styles.link} onClick={() => setMobileOpen(false)}>
+                {l.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
@@ -77,7 +85,7 @@ export default function Nav() {
             </button>
           ))}
         </div>
-        <a href="#contact" className={styles.cta} onClick={() => setMobileOpen(false)}>{t('bookNow')}</a>
+        <Link href="/#contact" className={styles.cta} onClick={() => setMobileOpen(false)}>{t('bookNow')}</Link>
       </div>
     </nav>
   )

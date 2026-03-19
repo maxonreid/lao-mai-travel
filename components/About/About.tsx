@@ -52,7 +52,7 @@ export default function About() {
                 sizes="(max-width: 640px) 45vw, 180px"
               />
 
-              <span className={styles.founderLabel}>Mr. Lath - Founder</span>
+              <span className={styles.founderLabel}>Latsamy SENGPHOMMACHANH · Founder</span>
             </div>
           </div>
           <p className={styles.body}>{t('body')}</p>

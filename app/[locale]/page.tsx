@@ -5,6 +5,7 @@ import Destinations from '@/components/Destinations/Destinations'
 import TourPackages from '@/components/TourPackages/TourPackages'
 import Panorama     from '@/components/Panorama/Panorama'
 import About        from '@/components/About/About'
+import Services     from '@/components/Services/Services'
 import Testimonial  from '@/components/Testimonial/Testimonial'
 import BookingForm  from '@/components/BookingForm/BookingForm'
 import Map          from '@/components/Map/Map'
@@ -50,6 +51,7 @@ export default function HomePage() {
         <TourPackages />
         <Panorama />
         <About />
+        <Services />
         <Testimonial />
         <BookingForm />
         <Map />
