@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import ProgressBar from '@/components/ProgressBar/ProgressBar'
+import WhatsAppWidget from '@/components/WhatsAppWidget/WhatsAppWidget'
 import { CONTACT } from '@/lib/contact'
 import './globals.css'
 
@@ -230,6 +231,7 @@ export default function RootLayout({
       <body>
         <ProgressBar />
         {children}
+        <WhatsAppWidget phoneNumber={CONTACT.phoneTel} />
         <Analytics />
       </body>
     </html>

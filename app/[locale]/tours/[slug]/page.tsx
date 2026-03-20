@@ -60,7 +60,11 @@ const GALLERY: Record<string, string[]> = {
     '/img/tourpackages/wild-thrill-trails-camping-&-homestay/bed-inside-village-house.jpeg',
   ],
   'bolaven-plateau-homestay': [
-    '/img/tourpackages/bolaven-plateau-homestay/couple-waterfall-behind.jfif',
+    '/img/tourpackages/bolaven-plateau-homestay/bolaven-plateau-landscape.jpg',
+    '/img/tourpackages/bolaven-plateau-homestay/couple-waterfall-behind.jpeg',
+    '/img/tourpackages/bolaven-plateau-homestay/people-dining-bolaven-plateau.jpeg',
+    '/img/tourpackages/bolaven-plateau-homestay/river-waves.jpeg',
+    '/img/tourpackages/bolaven-plateau-homestay/view-from-above.jpeg',
   ],
   'vientiane-culinary-cultural': [
     '/img/tourpackages/vientiane-culinary-cultural-experience/restaurant-dish-food-asia-cuisine-soup-990286-pxhere.com.jpg',

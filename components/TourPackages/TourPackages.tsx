@@ -22,7 +22,7 @@ const tourAssets: Record<string, string> = {
   'wild-thrill-trails':
     '/img/tourpackages/wild-thrill-trails-camping-&-homestay/tourists-with-villager-women.jpeg',
   'bolaven-plateau-homestay':
-    '/img/tourpackages/bolaven-plateau-homestay/couple-waterfall-behind.jfif',
+    '/img/tourpackages/bolaven-plateau-homestay/couple-waterfall-behind.jpeg',
   'vientiane-culinary-cultural':
     '/img/tourpackages/vientiane-culinary-cultural-experience/restaurant-dish-food-asia-cuisine-soup-990286-pxhere.com.jpg',
   'vang-vieng-cycling-karsts':
