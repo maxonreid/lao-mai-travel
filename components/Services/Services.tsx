@@ -5,7 +5,7 @@ import styles from './Services.module.css'
 const serviceAssets = [
   { icon: '🏨', img: '/img/services/accommodation.jpg',  alt: 'Accommodation in Laos' },
   { icon: '🎫', img: '/img/services/ticketing.jpeg',     alt: 'Ticketing services' },
-  { icon: '🚐', img: '/img/services/transportation.png', alt: 'Transportation in Laos' },
+  { icon: '🚐', img: '/img/services/transportation.jpeg', alt: 'Transportation in Laos' },
 ]
 
 export default function Services() {
