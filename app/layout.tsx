@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import ProgressBar from '@/components/ProgressBar/ProgressBar'
 import WhatsAppWidget from '@/components/WhatsAppWidget/WhatsAppWidget'
@@ -209,6 +210,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <meta name="theme-color" content="#c9a84c" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="geo.region" content="LA" />
@@ -233,6 +235,11 @@ export default function RootLayout({
         {children}
         <WhatsAppWidget phoneNumber={CONTACT.phoneTel} />
         <Analytics />
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="f14224ec-d341-4d1a-8d3b-19a1fa847e25"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
