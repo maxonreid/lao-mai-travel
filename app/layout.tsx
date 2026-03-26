@@ -3,6 +3,7 @@ import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import ProgressBar from '@/components/ProgressBar/ProgressBar'
 import WhatsAppWidget from '@/components/WhatsAppWidget/WhatsAppWidget'
+import PWARegister from '@/components/PWARegister/PWARegister'
 import { CONTACT } from '@/lib/contact'
 import './globals.css'
 
@@ -203,6 +204,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" />
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="f14224ec-d341-4d1a-8d3b-19a1fa847e25" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link
@@ -234,6 +236,7 @@ export default function RootLayout({
         <ProgressBar />
         {children}
         <WhatsAppWidget phoneNumber={CONTACT.phoneTel} />
+        <PWARegister />
         <Analytics />
         <Script
           src="https://cloud.umami.is/script.js"

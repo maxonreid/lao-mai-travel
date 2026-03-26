@@ -121,7 +121,7 @@ export default function CompanyProfilePage() {
               {[
                 { src: '/img/services/accommodation.jpg', label: 'Accommodation' },
                 { src: '/img/services/ticketing.jpeg', label: 'Ticketing' },
-                { src: '/img/services/transportation.png', label: 'Transportation' },
+                { src: '/img/services/transportation.jpeg', label: 'Transportation' },
               ].map(({ src, label }) => (
                 <div key={label} className={styles.serviceImgCell}>
                   <div className={styles.serviceImgWrap}>
