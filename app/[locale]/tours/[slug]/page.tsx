@@ -95,7 +95,7 @@ const GALLERY: Record<string, string[]> = {
     '/img/tourpackages/luang-prabang-cultural-pottery-experience/Lao-Pottery-House-3.jpeg',
   ],
   'authentic-hmong-khmu-trek': [
-    '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/group-photo-trekking.jfif',
+    '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/group-photo-trekking.jpeg',
     '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/group-photo-at-village.jfif',
     '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/people-trekking-photo-from-behind.jfif',
     '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/village-photo-no-people.jfif',
