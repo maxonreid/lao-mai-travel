@@ -56,13 +56,13 @@ export default function Nav() {
         {navLinks.map((l) => (
           <li key={l.label}>
             {l.href.startsWith('#') ? (
-              <Link
-                href={`/${l.href}`}
+              <a
+                href={`/${locale}${l.href}`}
                 className={styles.link}
                 onClick={() => setMobileOpen(false)}
               >
                 {l.label}
-              </Link>
+              </a>
             ) : (
               <Link href={l.href} className={styles.link} onClick={() => setMobileOpen(false)}>
                 {l.label}

@@ -29,6 +29,14 @@ const tourAssets: Record<string, string> = {
     '/img/tourpackages/cycling-the-karsts-lagoons/lagoon.png',
   'vang-vieng-cave-kayaking':
     '/img/tourpackages/vang-vieng-cave-kayaking-experience/laos-vang-vieng-river-water-landscape-peace-1663066-pxhere.com.jpg',
+  'luang-prabang-waterfalls-caves':
+    '/img/tourpackages/luang-prabang-turquoise-falls-sacred-caves-tour/Turquoise-Falls-&-Sacred-Caves-Tour-1.jpeg',
+  'luang-prabang-cultural-pottery':
+    '/img/tourpackages/luang-prabang-cultural-pottery-experience/Lao-Pottery-House-1.jpeg',
+  'authentic-hmong-khmu-trek':
+    '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/group-photo-trekking.jfif',
+  'luang-prabang-cultural-homestay':
+    '/img/tourpackages/luang-prabang-cultural-exchange-homestay-program/Luang Prabang Cultural Exchange & Homestay Program 4Days 3 Nights (1).jpeg',
 }
 
 export default function TourPackages() {
