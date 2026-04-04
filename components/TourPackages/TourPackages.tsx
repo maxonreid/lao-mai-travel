@@ -12,6 +12,7 @@ type TourMessage = {
   duration: string
 }
 
+// The Tour Package Cards
 const tourAssets: Record<string, string> = {
   'hidden-legacy-houaphanh':
     '/img/tourpackages/hidden-legacy-houaphanh/caves-entrance.jpg',
@@ -33,8 +34,10 @@ const tourAssets: Record<string, string> = {
     '/img/tourpackages/luang-prabang-turquoise-falls-sacred-caves-tour/Turquoise-Falls-&-Sacred-Caves-Tour-1.jpeg',
   'luang-prabang-cultural-pottery':
     '/img/tourpackages/luang-prabang-cultural-pottery-experience/Lao-Pottery-House-1.jpeg',
+
+  // Authentic Hmong & Khmu Trek from Luang Prabang
   'authentic-hmong-khmu-trek':
-    '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/group-photo-trekking.jfif',
+    '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/group-photo-trekking.jpeg',
   'luang-prabang-cultural-homestay':
     '/img/tourpackages/luang-prabang-cultural-exchange-homestay-program/Luang Prabang Cultural Exchange & Homestay Program 4Days 3 Nights (1).jpeg',
 }
