@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
+import TourGallery from '@/components/TourGallery/TourGallery'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
 import styles from './tour.module.css'
@@ -82,6 +83,32 @@ const GALLERY: Record<string, string[]> = {
     '/img/tourpackages/vang-vieng-cave-kayaking-experience/landscape-sea-water-nature-boat-lake-1338879-pxhere.com.jpg',
     '/img/tourpackages/vang-vieng-cave-kayaking-experience/landscape-tree-water-nature-mountain-cloud-971263-pxhere.com.jpg',
   ],
+  'luang-prabang-waterfalls-caves': [
+    '/img/tourpackages/luang-prabang-turquoise-falls-sacred-caves-tour/Turquoise-Falls-&-Sacred-Caves-Tour-1.jpeg',
+    '/img/tourpackages/luang-prabang-turquoise-falls-sacred-caves-tour/Turquoise-Falls-&-Sacred-Caves-Tour-2.jpg',
+    '/img/tourpackages/luang-prabang-turquoise-falls-sacred-caves-tour/Turquoise-Falls-&-Sacred-Caves-Tour-3.jpeg',
+    '/img/tourpackages/luang-prabang-turquoise-falls-sacred-caves-tour/Turquoise-Falls-&-Sacred-Caves-Tour-4.jpg',
+  ],
+  'luang-prabang-cultural-pottery': [
+    '/img/tourpackages/luang-prabang-cultural-pottery-experience/Lao-Pottery-House-1.jpeg',
+    '/img/tourpackages/luang-prabang-cultural-pottery-experience/Lao-Pottery-House-2.jpeg',
+    '/img/tourpackages/luang-prabang-cultural-pottery-experience/Lao-Pottery-House-3.jpeg',
+  ],
+  
+  // Authentic Hmong & Khmu Trek from Luang Prabang 
+  'authentic-hmong-khmu-trek': [
+    '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/group-photo-trekking.jpeg',
+    '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/group-photo-at-village.jfif',
+    '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/people-trekking-photo-from-behind.jfif',
+    '/img/tourpackages/authentic-hmong-&-khmu-trek-from-luang-prabang/village-photo-no-people.jfif',
+  ],
+  'luang-prabang-cultural-homestay': [
+    '/img/tourpackages/luang-prabang-cultural-exchange-homestay-program/Luang Prabang Cultural Exchange & Homestay Program 4Days 3 Nights (1).jpeg',
+    '/img/tourpackages/luang-prabang-cultural-exchange-homestay-program/Luang Prabang Cultural Exchange & Homestay Program 4Days 3 Nights (2).jpeg',
+    '/img/tourpackages/luang-prabang-cultural-exchange-homestay-program/Luang Prabang Cultural Exchange & Homestay Program 4Days 3 Nights (3).jpeg',
+    '/img/tourpackages/luang-prabang-cultural-exchange-homestay-program/Luang Prabang Cultural Exchange & Homestay Program 4Days 3 Nights (4).jpeg',
+    '/img/tourpackages/luang-prabang-cultural-exchange-homestay-program/Luang Prabang Cultural Exchange & Homestay Program 4Days 3 Nights (5).jpeg',
+  ],
 }
 
 export async function generateStaticParams() {
@@ -94,6 +121,10 @@ export async function generateStaticParams() {
     { slug: 'vientiane-culinary-cultural' },
     { slug: 'vang-vieng-cycling-karsts' },
     { slug: 'vang-vieng-cave-kayaking' },
+    { slug: 'luang-prabang-waterfalls-caves' },
+    { slug: 'luang-prabang-cultural-pottery' },
+    { slug: 'authentic-hmong-khmu-trek' },
+    { slug: 'luang-prabang-cultural-homestay' },
   ]
 }
 
@@ -116,7 +147,6 @@ export default async function TourDetailPage({ params }: Props) {
 
   const images = GALLERY[slug] ?? []
   const heroImg = images[0] ?? null
-  const galleryImgs = images.slice(1)
 
   return (
     <>
@@ -150,20 +180,8 @@ export default async function TourDetailPage({ params }: Props) {
       </section>
 
       {/* ── GALLERY ── */}
-      {galleryImgs.length > 0 && (
-        <div className={styles.gallery}>
-          {galleryImgs.map((src, idx) => (
-            <div key={idx} className={styles.galleryCell}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={src}
-                alt={`${tour.name} — photo ${idx + 2}`}
-                loading="lazy"
-                className={styles.galleryImg}
-              />
-            </div>
-          ))}
-        </div>
+      {images.length > 0 && (
+        <TourGallery images={images} tourName={tour.name} />
       )}
 
       {/* ── MAIN CONTENT ── */}

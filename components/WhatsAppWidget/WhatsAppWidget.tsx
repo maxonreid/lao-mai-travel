@@ -11,7 +11,7 @@ interface WhatsAppWidgetProps {
 export default function WhatsAppWidget({
   phoneNumber,
   message = 'Hello! I am interested in your Laos travel packages. Could you please help me?',
-  welcomeMessage = '👋 Hello! How can we help you plan your Laos adventure?',
+  welcomeMessage = '👋 Sabaidee! How can we help you plan your Laos adventure?',
 }: WhatsAppWidgetProps) {
   const [visible, setVisible] = useState(false)
   const [bubbleVisible, setBubbleVisible] = useState(false)
