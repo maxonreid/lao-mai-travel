@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import styles from './About.module.css'
+import FounderCard from '@/components/FounderCard/FounderCard'
 
 const featureIcons = ['🧭', '✦', '🌿']
 
@@ -41,19 +42,12 @@ export default function About() {
             <h2 className={styles.title}>
               {t('titleLine1')}<br /><em>{t('titleLine2')}</em>
             </h2>
-            <div className={styles.imgAccent}>
-              
-              {/* Picture of the founder */}
-              <Image
-                src="/img/about/mr-lath-founder.jpeg"
-                alt="Founder Mr. Lath"
-                fill
-                className={styles.img}
-                sizes="(max-width: 640px) 45vw, 180px"
-              />
 
-              <span className={styles.founderLabel}>Latsamy SENGPHOMMACHANH · Founder</span>
-            </div>
+              {/* Founder picture */}
+            {/* <div className={styles.imgAccent}>
+              <FounderCard variant="compact" />
+            </div> */}
+
           </div>
           <p className={styles.body}>{t('body')}</p>
           <ul className={styles.features}>

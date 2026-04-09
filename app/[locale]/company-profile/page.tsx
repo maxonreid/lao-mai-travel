@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
 import Nav    from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
+import FounderCard from '@/components/FounderCard/FounderCard'
 import { CONTACT } from '@/lib/contact'
 import styles from './company-profile.module.css'
 
@@ -70,21 +71,9 @@ export default function CompanyProfilePage() {
               <p className={styles.text}>{t('founderBio')}</p>
             </div>
 
-            <div className={styles.founderCard}>
-              <div className={styles.founderImgWrap}>
-                <Image
-                  src="/img/about/mr-lath-founder.jpeg"
-                  alt="Latsamy SENGPHOMMACHANH — Founder & Managing Director"
-                  fill
-                  className={styles.founderImg}
-                  sizes="(max-width: 768px) 80vw, 300px"
-                />
-              </div>
-              <div className={styles.founderInfo}>
-                <span className={styles.founderName}>{t('founderName')}</span>
-                <span className={styles.founderRole}>{t('founderRole')}</span>
-              </div>
-            </div>
+            {/* FOnuder Card Picture */}
+            {/* <FounderCard variant="full" name={t('founderName')} role={t('founderRole')} /> */}
+
           </section>
 
           {/* ── Photo Strip ── */}
