@@ -75,8 +75,8 @@ export async function POST(req: NextRequest) {
   }
 
   const { error } = await resend.emails.send({
-    from:    'Lao Mai Travel <onboarding@resend.dev>',
-    to:      'br33m4rk@gmail.com', // TODO: change to info@laomaitravel.com after verifying domain in Resend
+    from:    'Lao Mai Travel <info@laomaitravel.com>',
+    to:      'info@laomaitravel.com',
     replyTo: email,
     subject: `New Booking Inquiry from ${firstName} ${lastName}`,
     html: `
