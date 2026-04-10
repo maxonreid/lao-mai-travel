@@ -1,0 +1,75 @@
+/* ── Shared ── */
+.img {
+  object-fit: cover;
+}
+
+/* ── Compact variant (About / homepage) ── */
+.compact {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border: 3px solid var(--gold);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(201, 168, 76, 0.3);
+}
+
+.founderLabel {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: rgba(10, 15, 46, 0.75);
+  border: 1px solid rgba(201, 168, 76, 0.6);
+  padding: 0.4rem 0.55rem;
+}
+
+/* ── Full variant (Company Profile) ── */
+.full {
+  position: sticky;
+  top: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.imgWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  overflow: hidden;
+}
+
+.info {
+  padding: 1.25rem 1rem;
+  background: rgba(201, 168, 76, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: var(--gold-pale);
+}
+
+.role {
+  font-size: 0.72rem;
+  opacity: 0.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .full {
+    position: static;
+    max-width: 280px;
+  }
+}

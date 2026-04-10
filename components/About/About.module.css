@@ -34,34 +34,9 @@
 }
 
 .imgAccent {
-  position: relative;
   width: clamp(120px, 14vw, 180px);
-  aspect-ratio: 4 / 5;
-  border: 3px solid var(--gold);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(201,168,76,0.3);
-  /* margin: auto; */
   margin-right: 4rem;
   justify-self: end;
-}
-
-.founderLabel {
-  position: absolute;
-  left: 0.75rem;
-  bottom: 0.75rem;
-  font-family: 'Cinzel', serif;
-  font-size: 0.55rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--white);
-  background: rgba(10, 15, 46, 0.75);
-  border: 1px solid rgba(201,168,76,0.6);
-  padding: 0.4rem 0.55rem;
-}
-
-.img {
-  object-fit: cover;
 }
 
 .badge {

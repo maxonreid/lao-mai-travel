@@ -123,47 +123,6 @@
   border-bottom: 1px solid rgba(201, 168, 76, 0.1);
 }
 
-.founderCard {
-  position: sticky;
-  top: 7rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.founderImgWrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  border: 1px solid rgba(201, 168, 76, 0.3);
-  overflow: hidden;
-}
-
-.founderImg {
-  object-fit: cover;
-}
-
-.founderInfo {
-  padding: 1.25rem 1rem;
-  background: rgba(201, 168, 76, 0.05);
-  border: 1px solid rgba(201, 168, 76, 0.2);
-  border-top: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.founderName {
-  font-family: 'Cinzel', serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  color: var(--gold-pale);
-}
-
-.founderRole {
-  font-size: 0.72rem;
-  opacity: 0.5;
-}
 
 /* ── Mission & Vision ── */
 .mvSection {
@@ -416,12 +375,7 @@
     gap: 3rem;
   }
 
-  .founderCard {
-    position: static;
-    max-width: 280px;
-  }
-
-  .mvSection {
+.mvSection {
     grid-template-columns: 1fr;
   }
 
