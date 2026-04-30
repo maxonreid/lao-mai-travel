@@ -111,8 +111,11 @@
 }
 
 .bottomLinks {
+  padding-right: 150px; 
   display: flex;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .bottomLinks a {
@@ -152,6 +155,7 @@
   .bottomLinks {
     flex-direction: column;
     gap: 0.8rem;
+    padding-right: 0;
   }
 
   .social {
