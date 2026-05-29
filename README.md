@@ -1,6 +1,6 @@
 # Lao Mai Travel
 
-Next.js website for Lao Mai Travel with an embedded Sanity Studio CMS, Resend-powered booking inquiries, multilingual routes, PWA assets, Vercel Analytics, and Vercel Speed Insights.
+Next.js website for Lao Mai Travel with an embedded Sanity Studio CMS, Resend-powered booking inquiries, multilingual routes, PWA assets, Umami analytics, Vercel Analytics, and Vercel Speed Insights.
 
 ## Tech Stack
 
@@ -10,6 +10,7 @@ Next.js website for Lao Mai Travel with an embedded Sanity Studio CMS, Resend-po
 - Sanity CMS and embedded Studio at `/studio`
 - Resend for contact/booking inquiry email
 - next-intl for English and Thai routes
+- Umami Analytics for privacy-friendly traffic reporting
 - Vercel for hosting, analytics, and speed insights
 
 ## Prerequisites
@@ -19,6 +20,7 @@ Next.js website for Lao Mai Travel with an embedded Sanity Studio CMS, Resend-po
 - Git
 - Access to the Sanity project
 - Access to the Vercel project
+- Access to the Umami dashboard
 - Access to the Resend account and verified sending domain
 
 ## Local Setup
@@ -120,6 +122,29 @@ Lao Mai Travel <info@laomaitravel.com>
 
 Booking inquiries are sent to `info@laomaitravel.com`, with the visitor email set as `replyTo`.
 
+## Umami Analytics Setup
+
+Umami is loaded globally from `app/layout.tsx` using the hosted Cloud script:
+
+```text
+https://cloud.umami.is/script.js
+```
+
+The current Umami website ID is:
+
+```text
+f14224ec-d341-4d1a-8d3b-19a1fa847e25
+```
+
+To change or recreate the Umami property:
+
+1. Create the website in Umami and copy its website ID.
+2. Update every `data-website-id` value in `app/layout.tsx`.
+3. Deploy the site through Vercel.
+4. Open the production site and confirm a visit appears in the Umami dashboard.
+
+Keep the Umami website ID out of `.env.local` unless the implementation is changed to read it from an environment variable.
+
 ## Vercel Setup
 
 Import the Git repository into Vercel and use the project settings from `vercel.json`:
@@ -144,6 +169,7 @@ After deployment, verify:
 - `/en` and `/th` load correctly
 - `/studio` loads for authenticated Sanity users
 - booking form submissions send through Resend
+- visits appear in Umami
 - Sanity webhook requests revalidate updated content
 - `/sitemap.xml` and `/robots.txt` respond
 
